@@ -2,7 +2,7 @@
 ;; C311
 ;; Homework 1
 
-; log(15.0) * (3 + 18 * 2)
+(* (log 15.0 10) (+ 3 (* 18 2))) ; Assumed log used base 10
 (max 11 37 21 15 8)
 (>= (* 3 3.14) (/ 15 2))
 '(Maple Pine Hickory Elm Fir)
