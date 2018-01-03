@@ -46,15 +46,23 @@ t
 (= 1 1)
 t
 
-
-;Evaluate these statements!
 (not (equal 1 2))
+t
 (and (< 2 5) (<= 5 9))
+t
 (max 1 12 -50)
+12
 (expt 2 3)
+8
 (abs -15)
+15
 (sqrt 9)
+3.0
 (car '(monday tuesday wednesday thursday friday saturday sunday))
+monday
 (cdr '(monday tuesday wednesday thursday friday saturday sunday))
+(tuesday wednesday thursday friday saturday sunday)
 
 (car (cdr '(monday tuesday wednesday thursday friday saturday sunday)))
+tuesday
+
