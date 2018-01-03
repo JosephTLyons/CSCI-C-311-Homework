@@ -1,4 +1,5 @@
 ;; Joseph Lyons
+;; C311
 ;; Homework 1
 
 ; log(15.0) * (3 + 18 * 2)
