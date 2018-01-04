@@ -18,4 +18,7 @@ t
 (car '(Maple Pine Hickory Elm Fir))
 Maple
 
-;a function call resulting in a string telling us how many minutes are in a day. The minutes should be computed as a multiplication directly in the expression.
+(message "A day has %d minutes." (* 24 60))
+"A day has 1440 minutes."
+
+
