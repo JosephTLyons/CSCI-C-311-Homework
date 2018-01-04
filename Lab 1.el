@@ -90,3 +90,5 @@ monday
 (car (cdr '(monday tuesday wednesday thursday friday saturday sunday)))
 tuesday
 
+(<= 1 2 3)
+t
