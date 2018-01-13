@@ -39,3 +39,9 @@ year
 (truncate (* 3.14 year))
 6336
 
+;; truncate is a built-in function in `C source code'.
+;; (truncate ARG &optional DIVISOR)
+
+;; Truncate a floating point number to an int.
+;; Rounds ARG toward zero.
+;; With optional DIVISOR, truncate ARG/DIVISOR.
