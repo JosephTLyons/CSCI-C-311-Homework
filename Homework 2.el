@@ -3,6 +3,7 @@
 ;; Homework 2
 ;; Expressions are followed by their evaluated forms in the next line
 
+;; Part 1
 ;; Declare 3 variables
 (defvar age)
 age
@@ -45,3 +46,5 @@ year
 ;; Truncate a floating point number to an int.
 ;; Rounds ARG toward zero.
 ;; With optional DIVISOR, truncate ARG/DIVISOR.
+
+;; Part 2
