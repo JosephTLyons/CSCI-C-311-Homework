@@ -4,11 +4,24 @@
 ;; Expressions are followed by their evaluated forms in the next line
 
 (defvar age)
-(defvar zipCode "I live in Plymouth Indiana")
+(defvar savings "Money in savings account")
 (defvar year)
 
 (setq age 27)
-(setq zipCode 46563)
+(setq savings -30)
 (setq year 2018)
+
+(expt age 2)
+729
+
+(random year)
+1372
+
+(abs savings)
+30
+
+(cos age)
+
+(truncate (* 3.14 year))
 
 
