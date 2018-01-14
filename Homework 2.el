@@ -48,3 +48,14 @@ year
 ;; With optional DIVISOR, truncate ARG/DIVISOR.
 
 ;; Part 2
+;; Function 1 - Not done
+;; Function 2 - Not done
+
+(defun getMedian (x y z)
+    (or (if (and (> x y) (< x z)) (if (and (< x y) (> x z)) (print x))))))
+
+(getMedian 2 1 3)
+
+
+
+
