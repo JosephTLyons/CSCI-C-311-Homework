@@ -49,7 +49,8 @@ year
 
 ;; Part 2
 ;; Function 1 - Not done
-;; Function 2 - Not done
+
+(defun is-in-list ())
 
 (defun median (x y z)
     (car (cdr (sort (list x y z) '<))))
