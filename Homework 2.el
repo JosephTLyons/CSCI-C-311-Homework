@@ -53,6 +53,7 @@ year
 (defun is-in-list ())
 
 (defun median (x y z)
+    "Returns the median of 3 numbers."
     (car (cdr (sort (list x y z) '<))))
 
 (median 51 90 100)
