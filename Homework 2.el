@@ -51,15 +51,15 @@ year
 ;; Function 1 - Not done
 ;; Function 2 - Not done
 
-(defun getMedian (x y z)
+(defun median (x y z)
     (setq numbers (sort (list x y z) '<))
     (car (cdr numbers)))
 
-(getMedian 51 90 100)
+(median 51 90 100)
 90
 
-(getMedian 3 1 2)
+(median 3 1 2)
 2
 
-(getMedian 4 0 1)
+(median 4 0 1)
 1
