@@ -52,8 +52,7 @@ year
 ;; Function 2 - Not done
 
 (defun median (x y z)
-    (setq numbers (sort (list x y z) '<))
-    (car (cdr numbers)))
+    (car (cdr (sort (list x y z) '<))))
 
 (median 51 90 100)
 90
