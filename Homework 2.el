@@ -50,7 +50,9 @@ year
 ;; Part 2
 (defun prod-list ())
 
-(defun is-in-list ())
+(defun is-in-list ()
+    "Returns 't' if an element is in the list."    
+    )
 
 (defun median (x y z)
     "Returns the median of 3 numbers."
