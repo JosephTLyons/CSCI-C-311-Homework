@@ -54,12 +54,3 @@ year
 (defun getMedian (x y z)
     (setq numbers (sort (list x y z) '<))
     (car (cdr numbers)))
-
-
-
-
-
-
-
-
-
