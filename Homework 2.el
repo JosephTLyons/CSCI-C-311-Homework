@@ -48,7 +48,7 @@ year
 ;; With optional DIVISOR, truncate ARG/DIVISOR.
 
 ;; Part 2
-;; Function 1 - Not done
+(defun prod-list ())
 
 (defun is-in-list ())
 
