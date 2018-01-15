@@ -49,6 +49,7 @@ year
 
 ;; Part 2
 (defun prod-list ())
+
 (defun is-in-list (L x)
     "Returns 't' if 'x' element is in 'L' list, or 'nil' if it is not."
     (if (not L)
