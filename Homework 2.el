@@ -51,14 +51,20 @@ year
 (defun prod-list (L)
     "Returns the product of the elements in the list."
     (if (not L) 
-        0
-        (* (car L) (prod-list (cdr L)))))
+        0                                      ; if list is empty, return 0
+        (if (equal (length L) 1)               ; When at last number
+            (car L)                            ; Simply return it
+            (* (car L) (prod-list (cdr L)))))) ; Recursive call
+				    
 
 (prod-list '())
+0
 
 (prod-list '(1 2 3 4 5))
+120
 
 (prod-list '(33 2 9))
+594
 
 (defun is-in-list (L x)
     "Returns 't' if 'x' element is in 'L' list, 'nil' if it is not."
