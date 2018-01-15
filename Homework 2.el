@@ -67,6 +67,9 @@ t
 (is-in-list '(2 6 135 62 23 100) 10)
 nil
 
+(is-in-list '(5 1 26 53 75 92) 53)
+t
+
 
 (defun median (x y z)
     "Returns the median of 3 numbers."
