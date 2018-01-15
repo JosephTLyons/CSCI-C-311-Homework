@@ -56,7 +56,6 @@ year
             (car L)                            ; Simply return it
             (* (car L) (prod-list (cdr L)))))) ; Recursive call
 				    
-
 (prod-list '())
 0
 
@@ -68,6 +67,7 @@ year
 
 (prod-list '(2 2 2 2 3 3 3 3))
 1296
+
 
 (defun is-in-list (L x)
     "Returns 't' if 'x' element is in 'L' list, 'nil' if it is not."
