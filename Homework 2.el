@@ -66,6 +66,9 @@ year
 (prod-list '(33 2 9))
 594
 
+(prod-list '(2 2 2 2 3 3 3 3))
+1296
+
 (defun is-in-list (L x)
     "Returns 't' if 'x' element is in 'L' list, 'nil' if it is not."
     (if (not L)
@@ -99,3 +102,6 @@ t
 
 (median 4 0 1)
 1
+
+(median 55 22 11)
+22
