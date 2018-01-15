@@ -57,16 +57,16 @@ year
             (* (car L) (prod-list (cdr L)))))) ; Recursive call
 				    
 (prod-list '())
-0
+;0
 
 (prod-list '(1 2 3 4 5))
-120
+;120
 
 (prod-list '(33 2 9))
-594
+;594
 
 (prod-list '(2 2 2 2 3 3 3 3))
-1296
+;1296
 
 
 (defun is-in-list (L x)
@@ -78,16 +78,16 @@ year
             (is-in-list (cdr L) x))))
 
 (is-in-list '() 1)
-nil
+;nil
 
 (is-in-list '(4 3 2 1) 3)
-t
+;t
 
 (is-in-list '(2 6 135 62 23 100) 10)
-nil
+;nil
 
 (is-in-list '(5 1 26 53 75 92) 53)
-t
+;t
 
 
 (defun median (x y z)
@@ -95,13 +95,13 @@ t
     (car (cdr (sort (list x y z) '<))))
 
 (median 51 90 100)
-90
+;90
 
 (median 3 1 2)
-2
+;2
 
 (median 4 0 1)
-1
+;1
 
 (median 55 22 11)
-22
+;22
