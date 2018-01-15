@@ -3,7 +3,7 @@
 ;; Homework 2
 ;; Expressions are followed by their evaluated forms in the next line
 
-;; Part 1
+;; PART 1
 ;; Declare 3 variables
 (defvar age)
 age
@@ -47,7 +47,7 @@ year
 ;; Rounds ARG toward zero.
 ;; With optional DIVISOR, truncate ARG/DIVISOR.
 
-;; Part 2
+;; PART 2
 (defun prod-list (L)
     "Returns the product of the elements in the list."
     (if (not L) 
