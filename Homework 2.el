@@ -64,7 +64,7 @@ nil
 (is-in-list '(4 3 2 1) 3)
 t
 
-(is-in-list '(2 6 13 23) 10)
+(is-in-list '(2 6 135 62 23 100) 10)
 nil
 
 
