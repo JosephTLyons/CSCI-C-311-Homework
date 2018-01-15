@@ -49,10 +49,23 @@ year
 
 ;; Part 2
 (defun prod-list ())
+(defun is-in-list (L x)
+    "Returns 't' if 'x' element is in 'L' list, or 'nil' if it is not."
+    (if (not L)
+        nil
+        (if (equal (car L) x)
+            t
+            (is-in-list (cdr L) x))))
 
-(defun is-in-list ()
-    "Returns 't' if an element is in the list."    
-    )
+(is-in-list '() 1)
+nil
+
+(is-in-list '(4 3 2 1) 3)
+t
+
+(is-in-list '(2 6 13 23) 10)
+nil
+
 
 (defun median (x y z)
     "Returns the median of 3 numbers."
