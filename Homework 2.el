@@ -48,7 +48,17 @@ year
 ;; With optional DIVISOR, truncate ARG/DIVISOR.
 
 ;; Part 2
-(defun prod-list ())
+(defun prod-list (L)
+    "Returns the product of the elements in the list."
+    (if (not L) 
+        0
+        (* (car L) (prod-list (cdr L)))))
+
+(prod-list '())
+
+(prod-list '(1 2 3 4 5))
+
+(prod-list '(33 2 9))
 
 (defun is-in-list (L x)
     "Returns 't' if 'x' element is in 'L' list, 'nil' if it is not."
