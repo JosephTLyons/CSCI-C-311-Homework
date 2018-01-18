@@ -115,6 +115,6 @@ year
 
 
 ;; Another median method I wrote just for fun, not meant to be graded version
-(defun median (a b c)
+(defun median2 (a b c)
     "Returns the median of 3 numbers."
-    (car (cdr (sort (list x y z) '<))))
+    (car (cdr (sort (list a b c) '<))))
