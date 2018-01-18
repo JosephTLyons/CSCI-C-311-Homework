@@ -8,8 +8,12 @@
       t
     (if (not (cdr L))
         t
-      ()))) ; add loop here
+      (let ((m nil))
+        (dolist (x L m)
+          (if (equal 1 1)
+              (setq m t)))))))
 
 (is-const '())
 (is-const '(1))
+(is-const '(1 2))
 
