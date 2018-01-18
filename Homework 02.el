@@ -110,8 +110,8 @@ year
 (median 4 0 1)
 ;1
 
-(median 55 22 11)
-;22
+(median 55 (- 22) 11)
+;11
 
 
 ;; Another median method I wrote just for fun, not meant to be graded version
