@@ -49,12 +49,12 @@ year
 
 ;; PART 2
 (defun prod-list (L)
-    "Returns the product of the elements in the list."
-    (if (not L) 
-	0                                    ; If list is empty, return 0
-      (if (not (cdr L))                      ; When at last number
-	  (car L)                            ; Simply return it
-	(* (car L) (prod-list (cdr L))))))   ; Recursive call
+  "Returns the product of the elements in the list."
+  (if (not L) 
+      0                                    ; If list is empty, return 0
+    (if (not (cdr L))                      ; When at last number
+        (car L)                            ; Simply return it
+      (* (car L) (prod-list (cdr L))))))   ; Recursive call
 
 (prod-list '())
 ;0
@@ -70,12 +70,12 @@ year
 
 
 (defun is-in-list (L x)
-    "Returns 't' if 'x' element is in 'L' list, 'nil' if it is not."
-    (if (not L)
-        nil
-      (if (equal (car L) x)
-	  t
-	(is-in-list (cdr L) x))))
+  "Returns 't' if 'x' element is in 'L' list, 'nil' if it is not."
+  (if (not L)
+      nil
+    (if (equal (car L) x)
+        t
+      (is-in-list (cdr L) x))))
 
 (is-in-list '() 1)
 ;nil
@@ -91,16 +91,16 @@ year
 
 
 (defun median (a b c)
-    "Returns the median of 3 numbers."
-    (if (and (< a b) (< b c))
-	b
-      (if (and (< c b) (< b a))
-	  b
-	(if (and (< b a) (< a c))
-	    a
-	  (if (and (< c a) (< a b))
-	      a
-	    c)))))
+  "Returns the median of 3 numbers."
+  (if (and (< a b) (< b c))
+      b
+    (if (and (< c b) (< b a))
+        b
+      (if (and (< b a) (< a c))
+          a
+        (if (and (< c a) (< a b))
+            a
+          c)))))
 
 (median 51 90 100)
 ;90
@@ -120,8 +120,8 @@ year
 
 ;; Another median method I wrote just for fun, not meant to be graded version
 (defun median2 (a b c)
-    "Returns the median of 3 numbers."
-    (car (cdr (sort (list a b c) '<))))
+  "Returns the median of 3 numbers."
+  (car (cdr (sort (list a b c) '<))))
 
 (median2 51 90 100)
 ;90
