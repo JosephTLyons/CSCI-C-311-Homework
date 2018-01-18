@@ -124,11 +124,14 @@ year
     (car (cdr (sort (list a b c) '<))))
 
 (median2 51 90 100)
-;90                                                                             
+;90
+
 (median2 3 1 2)
-;2                                                                              
+;2
+
 (median2 4 0 1)
-;1                                                                              
+;1
+
 (median2 55 (- 22) 11)
 ;11
 
