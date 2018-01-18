@@ -113,6 +113,9 @@ year
 (median 55 (- 22) 11)
 ;11
 
+(median (- 21) (- 61) (- 1))
+;-21
+
 
 ;; Another median method I wrote just for fun, not meant to be graded version
 (defun median2 (a b c)
@@ -127,3 +130,6 @@ year
 ;1                                                                              
 (median2 55 (- 22) 11)
 ;11
+
+(median2 (- 21) (- 61) (- 1))
+;-21
