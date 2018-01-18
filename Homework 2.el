@@ -89,9 +89,17 @@ year
 ;t
 
 
-(defun median (x y z)
+(defun median (a b c)
     "Returns the median of 3 numbers."
-    (car (cdr (sort (list x y z) '<))))
+    (if (and (< a b) (< b c))
+	b
+      (if (and (< c b) (< b a))
+	  b
+	(if (and (< b a) (< a c))
+	    a
+	  (if (and (< c a) (< a b))
+	      a
+	      c)))))
 
 (median 51 90 100)
 ;90
