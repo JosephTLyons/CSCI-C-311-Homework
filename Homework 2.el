@@ -113,6 +113,7 @@ year
 (median 55 22 11)
 ;22
 
+
 ;; Another median method I wrote just for fun, not meant to be graded version
 (defun median (a b c)
     "Returns the median of 3 numbers."
