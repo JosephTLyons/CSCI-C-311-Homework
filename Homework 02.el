@@ -54,7 +54,8 @@ year
 	0                                    ; If list is empty, return 0
       (if (not (cdr L))                      ; When at last number
 	  (car L)                            ; Simply return it
-	(* (car L) (prod-list (cdr L)))))) ; Recursive call			    
+	(* (car L) (prod-list (cdr L))))))   ; Recursive call
+
 (prod-list '())
 ;0
 
