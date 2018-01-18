@@ -51,7 +51,7 @@ year
 (defun prod-list (L)
     "Returns the product of the elements in the list."
     (if (not L) 
-	0                                    ; if list is empty, return 0
+	0                                    ; If list is empty, return 0
       (if (not (cdr L))                      ; When at last number
 	  (car L)                            ; Simply return it
 	  (* (car L) (prod-list (cdr L)))))) ; Recursive call			    
