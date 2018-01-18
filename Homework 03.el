@@ -7,7 +7,7 @@
   (if (not L) 
       t
     (if (not (cdr L))
-	t
+        t
       ()))) ; add loop here
 
 (is-const '())
