@@ -8,12 +8,30 @@
       t
     (if (not (cdr L))
         t
-      (let ((m nil))
+      (let ((m t))
         (dolist (x L m)
-          (if (equal 1 1)
-              (setq m t)))))))
+          (if (not (equal (car L) x)) ; Compare every element with first 
+              (setq m nil)))))))
 
 (is-const '())
+;t
+
 (is-const '(1))
+;t
+
 (is-const '(1 2))
+;nil
+
+(is-const '(5 2 7 3 8 4))
+;nil
+
+(is-const '('(1 2 3) '(1 2 3) '(1 2 3)))
+;t
+
+(is-const '("dog" "dog" "dog"))
+;t
+
+(is-const '("dog" "dog" "dog" "cat"))
+;nil
+
 
