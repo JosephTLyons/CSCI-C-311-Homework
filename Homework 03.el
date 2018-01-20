@@ -3,14 +3,14 @@
 ;; Homework 3
 ;; Expressions are followed by their evaluated forms in the next line
 
-(defun is-const (L)
-  (if (not L) 
+(defun is-const (list)
+  (if (not list) 
       t
-    (if (not (cdr L))
+    (if (not (cdr list))
         t
       (let ((m t))
-        (dolist (x L m)
-          (if (not (equal (car L) x)) ; Compare every element with first 
+        (dolist (x list m)
+          (if (not (equal (car list) x)) ; Compare every element with first 
               (setq m nil)))))))
 
 (is-const '())
