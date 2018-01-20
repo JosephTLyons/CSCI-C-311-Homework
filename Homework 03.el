@@ -36,9 +36,10 @@
 
 
 ;; Not Done
-(defun element-i (L a)
-  (if (> a (length L))
+(defun element-i (list position)
+  (if (> position (length list))
       nil
-    (let ((m nil))
-      (dotimes (x a m)
-        (setq m x)))))
+    (let ((temp list))
+      (dotimes (x position number)
+        (setq number (car temp))
+        (setq temp (cdr temp))))))
