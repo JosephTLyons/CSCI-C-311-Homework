@@ -35,3 +35,10 @@
 ;nil
 
 
+;; Not Done
+(defun element-i (L a)
+  (if (> a (length L))
+      nil
+    (let ((m nil))
+      (dotimes (x a m)
+        (setq m x)))))
