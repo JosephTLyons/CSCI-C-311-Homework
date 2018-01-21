@@ -41,8 +41,8 @@
       nil
     (let ((temp list))
       (setq i (+ i 1))
-      (dotimes (x i number)
-        (setq number (car temp))
+      (dotimes (x i number-returned)
+        (setq number-returned (car temp))
         (setq temp (cdr temp))))))
 
 (element-i '(5 4 3 2 1) 2)
