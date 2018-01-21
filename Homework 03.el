@@ -35,6 +35,7 @@
 ;nil
 
 
+;; Use better logic to avoid having to use (setq i (+ i 1))
 (defun element-i (list i)
   (if (> i (length list))
       nil
