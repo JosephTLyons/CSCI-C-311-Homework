@@ -44,7 +44,10 @@
         (setq number (car temp))
         (setq temp (cdr temp))))))
 
-(element-i '(1 3 3 4 2 33) 0)
+(element-i '(5 4 3 2 1) 2)
+;3
+
+(element-i '(1 3 3 4 2 33) 2)
 ;1
 
 (element-i '(1 3 3 4 2 33) 5)
