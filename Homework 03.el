@@ -35,7 +35,6 @@
 ;nil
 
 
-;; Not Done
 (defun element-i (list i)
   (if (> i (length list))
       nil
