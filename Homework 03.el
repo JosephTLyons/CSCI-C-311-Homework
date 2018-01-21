@@ -36,10 +36,23 @@
 
 
 ;; Not Done
-(defun element-i (list position)
-  (if (> position (length list))
+(defun element-i (list i)
+  (if (> i (length list))
       nil
     (let ((temp list))
-      (dotimes (x position number)
+      (setq i (+ i 1))
+      (dotimes (x i number)
         (setq number (car temp))
         (setq temp (cdr temp))))))
+
+(element-i '(1 3 3 4 2 33) 0)
+;1
+
+(element-i '(1 3 3 4 2 33) 5)
+;33
+
+(element-i '() 0) ; List is empty, so it returns nil
+;nil
+
+(element-i '(1 2 3) 3)
+;nil
