@@ -22,6 +22,10 @@
 (is-const '(1 2))
 ;nil
 
+(is-const '(4 4 4 4 4 4 4 4))
+;t
+
+
 (is-const '(5 2 7 3 8 4))
 ;nil
 
