@@ -58,3 +58,15 @@
 
 (element-i '(1 2 3) 3)
 ;nil
+
+
+;; Not Done
+(defun is-sorted (L)
+
+;; D) Not Done
+(defun reverse (L)
+  (if (not L)
+      
+  (list (reverse (cdr L))))
+
+(reverse '(1 2 3 4 5))
