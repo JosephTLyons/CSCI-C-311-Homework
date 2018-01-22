@@ -6,39 +6,39 @@
 ;; PART 1
 ;; Declare 3 variables
 (defvar age)
-age
+;age
 
 (defvar savings "Money in savings account")
-savings
+;savings
 
 (defvar year)
-year
+;year
 
 ;; Assign values to these variables
 (setq age 27)
-27
+;27
 
 (setq savings -30)
--30
+;-30
 
 (setq year 2018)
-2018
+;2018
 
 ;; Use these variables in expressions (expt, random, abs, cos, truncate)
 (expt age 2)
-729
+;729
 
 (random year)
-1372
+;1372
 
 (abs savings)
-30
+;30
 
 (cos age)
--0.2921388087338362
+;-0.2921388087338362
 
 (truncate (* 3.14 year))
-6336
+;6336
 
 ;; truncate is a built-in function in `C source code'.
 ;; (truncate ARG &optional DIVISOR)
