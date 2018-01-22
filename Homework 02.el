@@ -92,13 +92,13 @@ year
 
 (defun median (a b c)
   "Returns the median of 3 numbers."
-  (if (and (< a b) (< b c))
+  (if (and (<= a b) (<= b c))
       b
-    (if (and (< c b) (< b a))
+    (if (and (<= c b) (<= b a))
         b
-      (if (and (< b a) (< a c))
+      (if (and (<= b a) (<= a c))
           a
-        (if (and (< c a) (< a b))
+        (if (and (<= c a) (<= a b))
             a
           c)))))
 
@@ -116,6 +116,9 @@ year
 
 (median (- 21) (- 61) (- 1))
 ;-21
+
+(median 1 3 1)
+;1
 
 
 ;; Another median method I wrote just for fun, not meant to be graded version
