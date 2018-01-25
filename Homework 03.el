@@ -81,6 +81,9 @@
 (is-sorted '(1))
 ;t
 
+(is-sorted '(1 1 1))
+;t
+
 (is-sorted '(1 2 3))
 ;t
 
@@ -89,9 +92,6 @@
 
 (is-sorted '(4 2 5 1 6))
 ;nil
-
-(is-sorted '(1 1 1))
-;t
 
 
 ;; D) Not Done
