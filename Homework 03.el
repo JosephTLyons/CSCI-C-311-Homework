@@ -3,15 +3,15 @@
 ;; Homework 3
 ;; Expressions are followed by their evaluated forms in the next line
 
-(defun is-const (list)
+(defun is-const (L)
   "Returns true if every element in the list is the equivalent to one another."
-  (if (not list) 
+  (if (not L) 
       t
-    (if (not (cdr list))
+    (if (not (cdr L))
         t
       (let ((m t))
-        (dolist (x list m)
-          (if (not (equal (car list) x)) ; Compare every element with first 
+        (dolist (x L m)
+          (if (not (equal (car L) x)) ; Compare every element with first 
               (setq m nil)))))))
 
 (is-const '())
@@ -66,11 +66,11 @@
 ;nil
 
 
-(defun is-sorted (list)
+(defun is-sorted (L)
   "Returns true if list is sorted in ascending order."
-  (let ((previous-val (car list)) (is-ordered t))
-    (setq list (cdr list))
-    (dolist (x list is-ordered)
+  (let ((previous-val (car L)) (is-ordered t))
+    (setq L (cdr L))
+    (dolist (x L is-ordered)
       (if (> previous-val x)
           (setq is-ordered nil))
       (setq previous-val x))))
@@ -100,10 +100,10 @@
 ;nil
 
 
-(defun reverse (list)
+(defun reverse (L)
   "Returns the list in reverse order"
   (let ((backwards '()))
-    (dolist (x list backwards)
+    (dolist (x L backwards)
       (setq backwards (append (list x) backwards)))))
 
 (reverse '())
