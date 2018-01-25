@@ -66,7 +66,6 @@
 ;nil
 
 
-;; Not Done
 (defun is-sorted (list)
   "Returns true if list is sorted in ascending order."
   (let ((previous-val (car list)) (is-ordered t))
