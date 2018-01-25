@@ -47,19 +47,22 @@
         (setq number-returned (car L))     ; length of list
         (setq L (cdr L)))))
 
-(element-i '(5 4 3 2 1) 2)
-;3
-
-(element-i '(1 3 3 4 2 33) 2)
-;3
-
-(element-i '(1 3 3 4 2 33) 5)
-;33
-
-(element-i '() 0) ; List is empty, so it returns nil
+(element-i '() 0) ; Empty list
 ;nil
 
-(element-i '(1 2 3) 3) ; Past index of list
+(element-i '(1) 0) ; List with one element
+;1
+
+(element-i '(5 6 7) 0) ; Test to make sure function works over whole list
+;5
+
+(element-i '(5 6 7) 1)
+;6
+
+(element-i '(5 6 7) 2)
+;7
+
+(element-i '(5 6 7) 3) ; Past index of the list
 ;nil
 
 
