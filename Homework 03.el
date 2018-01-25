@@ -73,7 +73,7 @@
     (dolist (x list is-ordered)
       (if (> previous-val x)
           (setq is-ordered nil))
-      (setq previous-val (car list)))))
+      (setq previous-val x))))
 
 (is-sorted '())
 ;t
