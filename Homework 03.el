@@ -93,10 +93,10 @@
 (is-sorted '(4 2 5 1 6))
 ;nil
 
-(is-sorted (list 2 (- 1) 3))
-nil
+(is-sorted '(-4 -2 3))
+;t
 
-(is-sorted (list (- 2) (- 3) 3))
+(is-sorted '(-2 -3 3))
 ;nil
 
 
