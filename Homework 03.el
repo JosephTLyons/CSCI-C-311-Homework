@@ -100,10 +100,20 @@
 ;nil
 
 
-;; D) Not Done
-(defun reverse (L)
-  (if (not L)
-      
-  (list (reverse (cdr L))))
+(defun reverse (list)
+  "Returns the list in reverse order"
+  (let ((backwards '()))
+    (dolist (x list backwards)
+      (setq backwards (append (list x) backwards)))))
+
+(reverse '())
+;nil
+
+(reverse '(1))
+;(1)
 
 (reverse '(1 2 3 4 5))
+;(5 4 3 2 1)
+
+(reverse '(-1 -2 -3 -4 -5))
+;(-5 -4 -3 -2 -1)
