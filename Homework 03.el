@@ -43,8 +43,8 @@
   "Returns the ith element in the list"
   (if (> i (length L))
       nil
-      (dotimes (x (+ 1 i) number-returned)
-        (setq number-returned (car L))
+      (dotimes (x (+ 1 i) number-returned) ; loop 0 to i + 1 to adjust for 
+        (setq number-returned (car L))     ; length of list
         (setq L (cdr L)))))
 
 (element-i '(5 4 3 2 1) 2)
