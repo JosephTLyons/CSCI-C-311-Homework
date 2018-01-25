@@ -39,13 +39,11 @@
 ;nil
 
 
-;; Use better logic to avoid having to use (setq i (+ i 1))
 (defun element-i (L i)
   "Returns the ith element in the list"
   (if (> i (length L))
       nil
-      (setq i (+ i 1))
-      (dotimes (x i number-returned)
+      (dotimes (x (+ 1 i) number-returned)
         (setq number-returned (car L))
         (setq L (cdr L)))))
 
