@@ -67,7 +67,33 @@
 
 
 ;; Not Done
-(defun is-sorted (L)
+(defun is-sorted (list)
+  "Returns true if list is sorted in ascending order."
+  (let ((previous-val (car list)) (is-ordered t))
+    (setq list (cdr list))
+    (dolist (x list is-ordered)
+      (if (> previous-val x)
+          (setq is-ordered nil))
+      (setq previous-val (car list)))))
+
+(is-sorted '())
+;t
+
+(is-sorted '(1))
+;t
+
+(is-sorted '(1 2 3))
+;t
+
+(is-sorted '(6 5 4 3 2 1))
+;nil
+
+(is-sorted '(4 2 5 1 6))
+;nil
+
+(is-sorted '(1 1 1))
+;t
+
 
 ;; D) Not Done
 (defun reverse (L)
