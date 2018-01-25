@@ -59,7 +59,7 @@
 (element-i '() 0) ; List is empty, so it returns nil
 ;nil
 
-(element-i '(1 2 3) 3)
+(element-i '(1 2 3) 3) ; Past index of list
 ;nil
 
 
