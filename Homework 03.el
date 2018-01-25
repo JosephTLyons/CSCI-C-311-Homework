@@ -4,6 +4,7 @@
 ;; Expressions are followed by their evaluated forms in the next line
 
 (defun is-const (list)
+  "Returns true if every element in the list is the equivalent to one another."
   (if (not list) 
       t
     (if (not (cdr list))
@@ -40,6 +41,7 @@
 
 ;; Use better logic to avoid having to use (setq i (+ i 1))
 (defun element-i (list i)
+  "Returns the ith element in the list"
   (if (> i (length list))
       nil
     (let ((temp list))
