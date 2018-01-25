@@ -40,11 +40,11 @@
 
 
 ;; Use better logic to avoid having to use (setq i (+ i 1))
-(defun element-i (list i)
+(defun element-i (L i)
   "Returns the ith element in the list"
-  (if (> i (length list))
+  (if (> i (length L))
       nil
-    (let ((temp list))
+    (let ((temp L))
       (setq i (+ i 1))
       (dotimes (x i number-returned)
         (setq number-returned (car temp))
