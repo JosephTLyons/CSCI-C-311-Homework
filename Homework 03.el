@@ -9,10 +9,10 @@
       t
     (if (not (cdr L))
         t
-      (let ((m t))
-        (dolist (x L m)
+      (let ((elements-equal t))
+        (dolist (x L elements-equal)
           (if (not (equal (car L) x)) ; Compare every element with first 
-              (setq m nil)))))))
+              (setq elements-equal nil)))))))
 
 (is-const '())
 ;t
