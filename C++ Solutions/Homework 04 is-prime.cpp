@@ -10,9 +10,13 @@
 
 bool isPrime (const int &number)
 {
-    // All numbers are divisible by one and themselves,
-    // So start divisor at
-    int divisor = 2;
+    if (number == 0 || number == 1)
+        return false;
+    
+    // All numbers are divisible by one,
+    // So start divisor at divisor at 1 and divisorCount at 1
+    int divisor = 1;
+    int divisorCount = 1;
     int quotient;
     
     do
@@ -20,7 +24,12 @@ bool isPrime (const int &number)
         quotient = number / divisor;
         
         if (number % divisor == 0)
-            return false; // Divisible by more than just one and itself
+        {
+            divisorCount++;
+            
+            if (divisorCount > 2)
+                return false;
+        }
         
         divisor++;
     }
