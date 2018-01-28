@@ -17,9 +17,9 @@ bool isPrime (const int &number)
     // So start divisor at divisor at 1 and divisorCount at 1
     int divisor = 1;
     int divisorCount = 1;
-    int quotient;
+    int quotient = 1;
     
-    do
+    while (divisor <= quotient)
     {
         quotient = number / divisor;
         
@@ -33,7 +33,6 @@ bool isPrime (const int &number)
         
         divisor++;
     }
-    while (divisor < quotient);
     
     return true;
 }
