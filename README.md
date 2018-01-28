@@ -2,7 +2,7 @@
 
 - This repository contains all Elisp homework and lab files associated with IUSB's CSCI-C 311 (Programming Languages) course of Spring 2018.  
 
-- Some homework problems required me to write an initial version in C++, which conveniently reside in the "C++ Solutions" folder.
+- Some homework problems required me to write initial versions in C++, which conveniently reside in the "C++ Solutions" folder.
 
 - The "Remove.sh" script simply removes backup and temporary files created by Emacs.
 
