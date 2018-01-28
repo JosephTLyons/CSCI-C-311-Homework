@@ -40,13 +40,11 @@ bool isPrime (const int &number)
 
 int main()
 {
-    std::cout << isPrime (157) << std::endl;
-    std::cout << isPrime (163) << std::endl;
-    std::cout << isPrime (167) << std::endl;
-    std::cout << isPrime (181) << std::endl;
-    std::cout << isPrime (191) << std::endl;
-    std::cout << isPrime (193) << std::endl;
-    std::cout << isPrime (156) << std::endl;
+    for (int i = 0; i < 500; i++)
+    {
+        if (isPrime (i))
+            std::cout << i << std::endl;
+    }
     
     return 0;
 }
