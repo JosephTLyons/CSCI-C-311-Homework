@@ -12,7 +12,7 @@
 ;; values past the halfway mark, since they won't be evenly divide the
 ;; number were checking   
 (defun is-prime (number)
-  (let ((number-is-prime) (divisor-count 0) (quotient number))
+  (let ((divisor-count 0) (quotient number))
     (dotimes (divisor quotient)
       (setq divisor (+ 1 divisor))
       (setq quotient (/ number divisor))
@@ -20,5 +20,5 @@
           (setq divisor-count (+ 2 divisor-count)))
       (setq divisor (+ 1 divisor)))
     (if (equal divisor-count 2)
-        (setq number-is-prime t)
-      (setq number-is-prime nil))))
+        t
+      nil)))
