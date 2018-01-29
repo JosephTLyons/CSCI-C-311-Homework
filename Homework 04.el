@@ -6,11 +6,6 @@
 ;; Part 1 - Not Done
 
 ;; Part 2 - Not Done
-;; Logic: divisor-counter = 1 since all positive integers are divisible
-;; by themselves
-;; halfway-mark = (number / 2) because we dont need to waste time checking
-;; values past the halfway mark, since they won't be evenly divide the
-;; number were checking   
 (defun is-prime (number)
   (let ((divisor-count 0) (quotient number))
     (dotimes (divisor quotient)
