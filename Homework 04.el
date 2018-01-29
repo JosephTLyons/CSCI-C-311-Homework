@@ -12,7 +12,7 @@
 ;; x to 1 in dotimes loops.
 ;; Each loop, test to see if the divisor evenly divides the number,  
 ;; Increment the divisor number, and recalculate the quotient
-;; to cut down the amount of loop executions needed.  It is wasteful to 
+;; to cut down the amount of loop executions needed.  It is inefficient to 
 ;; see if all divisors from 1 to number evenly divide the number.
 ;; In the body, if a divisor evenly divides a number, we increment by 2
 ;; Since the number is divisible by both the divisor and quotient
