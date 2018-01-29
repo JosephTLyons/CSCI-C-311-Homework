@@ -10,9 +10,10 @@
 ;; We execute the body of the loop while divisor (starting at 1) < quotient,
 ;; which is equivalent to x (starting at 0) < (quotient - 1), since we cant set
 ;; x to 1 in dotimes loops.
-;; Each loop, increment the divisor number and recalculate the quotient
-;; to cut down the amount of loop executions needed - testing from 1 to 
-;; The number checked is wasteful.
+;; Each loop, test to see if the divisor evenly divides the number,  
+;; Increment the divisor number, and recalculate the quotient
+;; to cut down the amount of loop executions needed.  It is wasteful to 
+;; see if all divisors from 1 to number evenly divide the number.
 (defun is-prime (number)
   (let ((divisor 1) (divisor-count 0) (quotient number))
     (dotimes (x (- quotient 1))
