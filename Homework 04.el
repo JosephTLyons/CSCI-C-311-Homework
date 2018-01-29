@@ -6,13 +6,19 @@
 ;; Part 1 - Not Done
 
 ;; Part 2 - Not Done
-;; Logic: divisor-counter = 2 since all positive integers are divisible
-;; by one and themselves
+;; Logic: divisor-counter = 1 since all positive integers are divisible
+;; by themselves
 ;; halfway-mark = (number / 2) because we dont need to waste time checking
 ;; values past the halfway mark, since they won't be evenly divide the
 ;; number were checking   
 (defun is-prime (number)
-  (let ((prime t) (divisor-counter 2) (halfway-mark (/ number 2)))
-    (dotimes (2 halfway-mark prime)
-      
-;; Part 3 - Not Done
+  (let ((number-is-prime) (divisor-count 0) (quotient number))
+    (dotimes (divisor quotient)
+      (setq divisor (+ 1 divisor))
+      (setq quotient (/ number divisor))
+      (if (equal (mod number divisor) 0)
+          (setq divisor-count (+ 2 divisor-count)))
+      (setq divisor (+ 1 divisor)))
+    (if (equal divisor-count 2)
+        (setq number-is-prime t)
+      (setq number-is-prime nil))))
