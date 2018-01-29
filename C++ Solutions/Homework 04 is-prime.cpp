@@ -10,8 +10,6 @@
 
 bool isPrime (const int &number)
 {
-    // All numbers are divisible by one,
-    // So start divisor at divisor at 1 and divisorCount at 1
     int divisor = 1;
     int divisorCount = 0;
     int quotient = number;
