@@ -10,31 +10,27 @@
 
 bool isPrime (const int &number)
 {
-    if (number == 0 || number == 1)
-        return false;
-    
     // All numbers are divisible by one,
     // So start divisor at divisor at 1 and divisorCount at 1
     int divisor = 1;
-    int divisorCount = 1;
-    int quotient = 1;
+    int divisorCount = 0;
+    int quotient = number;
     
-    while (divisor <= quotient)
+    while (divisor < quotient)
     {
         quotient = number / divisor;
         
         if (number % divisor == 0)
-        {
-            divisorCount++;
-            
-            if (divisorCount > 2)
-                return false;
-        }
+            divisorCount += 2;
         
         divisor++;
     }
     
-    return true;
+    if (divisorCount == 2)
+        return true;
+    
+    else
+        return false;
 }
 
 int main()
