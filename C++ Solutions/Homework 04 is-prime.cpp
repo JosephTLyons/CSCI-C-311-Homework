@@ -31,13 +31,18 @@ bool isPrime (const int &number)
         return false;
 }
 
-int main()
+void printPrimeNumbersUpTo (const int &number)
 {
-    for (int i = 0; i < 500; i++)
+    for (int i = 0; i <= number; i++)
     {
         if (isPrime (i))
             std::cout << i << std::endl;
     }
+}
+
+int main()
+{
+    printPrimeNumbersUpTo (500);
     
     return 0;
 }
