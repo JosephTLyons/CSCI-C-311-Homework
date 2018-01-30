@@ -31,9 +31,9 @@ bool isPrime (const int &number)
         return false;
 }
 
-void printPrimeNumbersUpTo (const int &number)
+void printPrimeNumbersUpTo (const int &upperLimit)
 {
-    for (int i = 0; i <= number; i++)
+    for (int i = 0; i <= upperLimit; i++)
     {
         if (isPrime (i))
             std::cout << i << std::endl;
@@ -42,7 +42,7 @@ void printPrimeNumbersUpTo (const int &number)
 
 int main()
 {
-    printPrimeNumbersUpTo (500);
+    printPrimeNumbersUpTo (10);
     
     return 0;
 }
