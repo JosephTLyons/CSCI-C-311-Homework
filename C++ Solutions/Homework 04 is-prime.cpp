@@ -42,7 +42,7 @@ void printPrimeNumbersUpTo (const int &upperLimit)
 
 int main()
 {
-    printPrimeNumbersUpTo (10);
+    printPrimeNumbersUpTo (500);
     
     return 0;
 }
