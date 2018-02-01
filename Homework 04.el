@@ -165,6 +165,9 @@
 (print-list '("Dog" "Cat" "Bird"))
 ;Dog Cat Bird ("Dog" "Cat" "Bird")
 
+(print-list '(z "human" 3.14))
+;z human 3.14 (z "human" 3.14)
+
 (funcall 'print-list '(1 1 2 3 5 8))
 ;1 1 2 3 5 8 (1 1 2 3 5 8)
 
