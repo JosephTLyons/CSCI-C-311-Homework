@@ -52,15 +52,16 @@
 ;; In the body, if a divisor evenly divides a number, we increment by 2
 ;; Since the number is divisible by both the divisor and quotient
 (defun is-prime (number)
-  (let ((divisor 1) (divisor-count 0) (quotient number))
-    (dotimes (x (- quotient 1))
-      (setq quotient (/ number divisor))
-      (if (equal (mod number divisor) 0)
-          (setq divisor-count (+ 2 divisor-count)))
-      (setq divisor (+ 1 divisor)))
-    (if (equal divisor-count 2)
-        t
-      nil)))
+  (if (or (= number 0) (= number 1))
+      nil
+    (let ((divisor 1) (divisor-count 0) (limit (sqrt number)))
+      (dotimes (x (- limit 1))
+        (if (equal (mod number divisor) 0)
+            (setq divisor-count (+ 2 divisor-count)))
+        (setq divisor (+ 1 divisor)))
+      (if (equal divisor-count 2)
+          t
+        nil)))
 
 (is-prime 0)
 ;nil

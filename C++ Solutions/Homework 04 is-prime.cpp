@@ -7,17 +7,20 @@
 //
 
 #include <iostream>
+#include <math.h>
 
 bool isPrime (const int &number)
 {
-    int divisor = 1;
-    int divisorCount = 0;
-    int quotient = number;
+    if (number == 0 || number == 1)
+        return false;
     
-    while (divisor < quotient)
+    int divisor = 2;
+    int divisorCount = 2;
+    
+    double limit = sqrt (number);
+    
+    while (divisor <= limit)
     {
-        quotient = number / divisor;
-        
         if (number % divisor == 0)
             divisorCount += 2;
         
