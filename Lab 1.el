@@ -3,6 +3,7 @@
 ;; Lab 1
 ;; Expressions are followed by their evaluated forms in the next line
 
+
 (+ 2 3)
 ;5
 

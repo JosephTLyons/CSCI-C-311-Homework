@@ -3,6 +3,7 @@
 ;; Homework 2
 ;; Expressions are followed by their evaluated forms in the next line
 
+
 ;; PART 1
 ;; Declare 3 variables
 (defvar age)

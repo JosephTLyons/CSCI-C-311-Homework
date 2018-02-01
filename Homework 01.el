@@ -3,6 +3,7 @@
 ;; Homework 1
 ;; Expressions are followed by their evaluated forms in the next line
 
+
 (* (log 15.0 2) (+ 3 (* 18 2))) ; Assumed log used base 2
 ;152.36873322873222
 

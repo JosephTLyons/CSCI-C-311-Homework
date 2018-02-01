@@ -3,6 +3,7 @@
 ;; Homework 4
 ;; Expressions are followed by their evaluated forms in the next line
 
+
 ;; Part 1
 (defun GCD (n m)
   (let ((remainder 1) (dividend n) (divisor m))

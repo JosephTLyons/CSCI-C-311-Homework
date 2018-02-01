@@ -3,9 +3,10 @@
 ;; Homework 3
 ;; Expressions are followed by their evaluated forms in the next line
 
+
 (defun is-const (L)
   "Returns true if every element in the list is the equivalent to one another."
-  (if (not L) 
+  (if (not L)
       t
     (if (not (cdr L))
         t
