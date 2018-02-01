@@ -33,6 +33,12 @@
 (GCD 100000 70050) ; Testing some big numbers
 ;50
 
+(funcall 'GCD 9 3)
+;3
+
+(apply 'GCD '(10 5))
+;5
+
 
 ;; Part 2
 ;; Logic: When a number has more than 2 divisors, it is not prime.
@@ -85,6 +91,12 @@
 
 (is-prime 9)
 ;nil
+
+(funcall 'is-prime 9)
+;nil
+
+(apply 'is-prime '(5))
+;t
 
 
 ;; Part 3 - Not Done
