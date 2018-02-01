@@ -151,13 +151,13 @@
 (is-prime2 9)
 ;nil
 
-(is-prime 401) ; Testing a larger number that is prime
+(is-prime2 401) ; Testing a larger number that is prime
 ;t
 
-(funcall 'is-prime 9)
+(funcall 'is-prime2 9)
 ;nil
 
-(apply 'is-prime '(5))
+(apply 'is-prime2 '(5))
 ;t
 
 
