@@ -12,6 +12,25 @@
       (setq divisor remainder))
     dividend))
 
+(GCD 1 1)
+;1
+
+(GCD 14 20)
+;2
+
+(GCD 1024 40)
+;8
+
+(GCD 40 1024) ; Testing numbers both ways
+;8
+
+(GCD 15 100)
+;5
+
+(GCD 200 90)
+;10
+
+
 ;; Part 2
 ;; Logic: When a number has more than 2 divisors, it is not prime.
 ;; We execute the body of the loop while divisor (starting at 1) < quotient,
