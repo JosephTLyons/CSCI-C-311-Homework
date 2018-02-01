@@ -6,7 +6,7 @@
 ;; Part 1
 (defun GCD (n m)
   (let ((remainder 1) (dividend n) (divisor m))
-    (while (not (equal remainder 0))
+    (while (not (= remainder 0))
       (setq remainder (mod dividend divisor))
       (setq dividend divisor)
       (setq divisor remainder))
