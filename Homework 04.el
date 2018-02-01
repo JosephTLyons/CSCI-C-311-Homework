@@ -66,7 +66,7 @@
           t
         nil))))
 
-(is-prime 0)
+(is-prime 0) ; Testing the common numbers
 ;nil
 
 (is-prime 1)
@@ -118,7 +118,7 @@
         t
       nil)))
 
-(is-prime2 0)
+(is-prime2 0) ; Testing the common numbers
 ;nil
 
 (is-prime2 1)
