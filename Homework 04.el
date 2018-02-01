@@ -3,7 +3,14 @@
 ;; Homework 4
 ;; Expressions are followed by their evaluated forms in the next line
 
-;; Part 1 - Not Done
+;; Part 1
+(defun GCD (x y)
+  (let ((remainder 1) (dividend x) (divisor y))
+    (while (not (equal remainder 0))
+      (setq remainder (mod dividend divisor))
+      (setq dividend divisor)
+      (setq divisor remainder))
+    dividend))
 
 ;; Part 2
 ;; Logic: When a number has more than 2 divisors, it is not prime.
