@@ -34,6 +34,29 @@ bool isPrime (const int &number)
         return false;
 }
 
+bool isPrime2 (const int &number)
+{
+    int divisor = 1;
+    int divisorCount = 0;
+    int quotient = number;
+    
+    while (divisor < quotient)
+    {
+        quotient = number / divisor;
+        
+        if (number % divisor == 0)
+            divisorCount += 2;
+        
+        divisor++;
+    }
+    
+    if (divisorCount == 2)
+        return true;
+    
+    else
+        return false;
+}
+
 void printPrimeNumbersUpTo (const int &upperLimit)
 {
     for (int i = 0; i <= upperLimit; i++)
