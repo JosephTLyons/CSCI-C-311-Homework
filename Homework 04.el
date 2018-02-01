@@ -41,27 +41,29 @@
 
 
 ;; Part 2
-;; Logic: When a number has more than 2 divisors, it is not prime.
-;; We execute the body of the loop while divisor (starting at 1) < quotient,
-;; which is equivalent to x (starting at 0) < (quotient - 1), since we cant set
-;; x to 1 in dotimes loops.
-;; Each loop, test to see if the divisor evenly divides the number,  
-;; Increment the divisor number, and recalculate the quotient
-;; to cut down the amount of loop executions needed.  It is inefficient to 
-;; see if all divisors from 1 to number evenly divide the number.
-;; In the body, if a divisor evenly divides a number, we increment by 2
-;; Since the number is divisible by both the divisor and quotient
+;; Logic: When a number greater than one that more than 2 divisors, 
+;; it is not prime.
+
+;; I explicitly test for 0 and 1, since those numbers are a bit odd
+;; when compared to the tests for the rest of the prime numbers.
+;; The only aspect that is a bit confusing in my algorithm is the 
+;; test condition of x < limit - 1.  This is where this comes from:
+;; I want to test that divisor <= limit.  Divisors initial value is 2, but
+;; Dotimes can't start its counter from 2, it starts from 0, so I need to
+;; adjust the inequality.  x (starting at 0) <= limit - 2.  Because dotimes
+;; loops dont include the limit number, I need to change the inequality:
+;; x < limit - 2 + 1, so  x < limit - 1.
 (defun is-prime (number)
   (if (or (= number 0) (= number 1))
       nil
-    (let ((divisor 1) (divisor-count 0) (limit (sqrt number)))
+    (let ((divisor 2) (divisor-count 2) (limit (floor (sqrt number))))
       (dotimes (x (- limit 1))
         (if (equal (mod number divisor) 0)
             (setq divisor-count (+ 2 divisor-count)))
         (setq divisor (+ 1 divisor)))
       (if (equal divisor-count 2)
           t
-        nil)))
+        nil))))
 
 (is-prime 0)
 ;nil
@@ -121,4 +123,3 @@
 
 (apply 'print-list '((9 8 7)))
 ;9 8 7 (9 8 7)
-

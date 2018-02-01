@@ -17,9 +17,9 @@ bool isPrime (const int &number)
     int divisor = 2;
     int divisorCount = 2;
     
-    double limit = sqrt (number);
+    int limit = floor (sqrt (number));
     
-    while (divisor <= limit)
+    while (divisor < limit + 1)
     {
         if (number % divisor == 0)
             divisorCount += 2;
