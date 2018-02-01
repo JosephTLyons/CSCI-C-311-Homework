@@ -30,6 +30,9 @@
 (GCD 200 90)
 ;10
 
+(GCD 100000 70050) ; Testing some big numbers
+;50
+
 
 ;; Part 2
 ;; Logic: When a number has more than 2 divisors, it is not prime.
