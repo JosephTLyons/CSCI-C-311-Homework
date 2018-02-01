@@ -154,6 +154,12 @@
 (is-prime 401) ; Testing a larger number that is prime
 ;t
 
+(funcall 'is-prime 9)
+;nil
+
+(apply 'is-prime '(5))
+;t
+
 
 ;; Part 3 - Not Done
 (defun print-list (L)
