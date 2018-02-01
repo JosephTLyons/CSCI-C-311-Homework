@@ -102,6 +102,52 @@
 ;t
 
 
+;; I also wrote this version of the prime number function
+;; It doesn't need to test explicity for 0 or 1, but the drawback
+;; is that it tests the divisors starting from 1, not 2
+;; I feel it is a cleaner solution, but probably not as efficient
+(defun is-prime2 (number)
+  (let ((divisor 1) (divisor-count 0) (quotient number))
+    (dotimes (x (- quotient 1))
+      (setq quotient (/ number divisor))
+      (if (equal (mod number divisor) 0)
+          (setq divisor-count (+ 2 divisor-count)))
+      (setq divisor (+ 1 divisor)))
+    (if (equal divisor-count 2)
+        t
+      nil)))
+
+(is-prime2 0)
+;nil
+
+(is-prime2 1)
+;nil
+
+(is-prime2 2)
+;t
+
+(is-prime2 3)
+;t
+
+(is-prime2 4)
+;nil
+
+(is-prime2 5)
+;t
+
+(is-prime2 6)
+;nil
+
+(is-prime2 7)
+;t
+
+(is-prime2 8)
+;nil
+
+(is-prime2 9)
+;nil
+
+
 ;; Part 3 - Not Done
 (defun print-list (L)
   (mapc (lambda (x) (princ x) (princ " ")) L))
