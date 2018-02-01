@@ -4,8 +4,8 @@
 ;; Expressions are followed by their evaluated forms in the next line
 
 ;; Part 1
-(defun GCD (x y)
-  (let ((remainder 1) (dividend x) (divisor y))
+(defun GCD (n m)
+  (let ((remainder 1) (dividend n) (divisor m))
     (while (not (equal remainder 0))
       (setq remainder (mod dividend divisor))
       (setq dividend divisor)
