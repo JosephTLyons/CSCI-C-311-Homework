@@ -88,3 +88,5 @@
 
 
 ;; Part 3 - Not Done
+(defun print-list (L)
+  (mapc (lambda (x) (princ x) (princ " ")) L))
