@@ -11,7 +11,7 @@
         t
       (let ((elements-equal t))
         (dolist (x L elements-equal)
-          (if (not (equal (car L) x)) ; Compare every element with first 
+          (if (not (equal (car L) x)) ; Compare every element with first
               (setq elements-equal nil)))))))
 
 (is-const '())
@@ -43,7 +43,7 @@
   "Returns the ith element in the list"
   (if (> i (length L))
       nil
-      (dotimes (x (+ 1 i) number-returned) ; loop 0 to i + 1 to adjust for 
+      (dotimes (x (+ 1 i) number-returned) ; loop 0 to i + 1 to adjust for
         (setq number-returned (car L))     ; length of list
         (setq L (cdr L)))))
 

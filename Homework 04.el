@@ -41,12 +41,12 @@
 
 
 ;; Part 2
-;; Logic: When a number greater than one that more than 2 divisors, 
+;; Logic: When a number greater than one that more than 2 divisors,
 ;; it is not prime.
 
 ;; I explicitly test for 0 and 1, since those numbers are a bit odd
 ;; when compared to the tests for the rest of the prime numbers.
-;; The only aspect that is a bit confusing in my algorithm is the 
+;; The only aspect that is a bit confusing in my algorithm is the
 ;; test condition of x < limit - 1.  This is where this comes from:
 ;; I want to test that divisor <= limit.  Divisors initial value is 2, but
 ;; Dotimes can't start its counter from 2, it starts from 0, so I need to

@@ -50,7 +50,7 @@
 ;; PART 2
 (defun prod-list (L)
   "Returns the product of the elements in the list."
-  (if (not L) 
+  (if (not L)
       0                                    ; If list is empty, return 0
     (if (not (cdr L))                      ; When at last number
         (car L)                            ; Simply return it

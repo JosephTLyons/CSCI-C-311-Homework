@@ -20,5 +20,3 @@
 
 (message "A day has %d minutes." (* 24 60))
 ;"A day has 1440 minutes."
-
-
