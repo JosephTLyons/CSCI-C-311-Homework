@@ -102,3 +102,22 @@
 ;; Part 3 - Not Done
 (defun print-list (L)
   (mapc (lambda (x) (princ x) (princ " ")) L))
+
+(print-list '(1 2 3))
+;1 2 3 (1 2 3)
+
+(print-list '(10 9 8 7 6 5 4 3 2 1))
+;10 9 8 7 6 5 4 3 2 1 (10 9 8 7 6 5 4 3 2 1)
+
+(print-list '(a b c))
+;a b c (a b c)
+
+(print-list '("Dog" "Cat" "Bird"))
+;Dog Cat Bird ("Dog" "Cat" "Bird")
+
+(funcall 'print-list '(1 1 2 3 5 8))
+;1 1 2 3 5 8 (1 1 2 3 5 8)
+
+(apply 'print-list '((9 8 7)))
+;9 8 7 (9 8 7)
+
