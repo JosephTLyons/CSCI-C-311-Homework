@@ -96,6 +96,9 @@
 (is-prime 9)
 ;nil
 
+(is-prime 401) ; Testing a larger number that is prime
+;t
+
 (funcall 'is-prime 9)
 ;nil
 
@@ -147,6 +150,9 @@
 
 (is-prime2 9)
 ;nil
+
+(is-prime 401) ; Testing a larger number that is prime
+;t
 
 
 ;; Part 3 - Not Done
