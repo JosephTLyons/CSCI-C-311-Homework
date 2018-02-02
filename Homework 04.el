@@ -55,7 +55,7 @@
 ;; loops dont include the limit number, I need to change the inequality:
 ;; x < limit - 2 + 1, so  x < limit - 1.
 (defun is-prime (number)
-  (if (or (= number 0) (= number 1))
+  (if (< number 2)
       nil
     (let ((divisor 2) (divisor-count 2) (limit (floor (sqrt number))))
       (dotimes (x (- limit 1))
