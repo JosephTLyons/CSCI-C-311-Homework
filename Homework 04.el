@@ -59,7 +59,7 @@
       nil
     (let ((divisor 2) (divisor-count 2) (limit (floor (sqrt number))))
       (dotimes (x (- limit 1))
-        (if (equal (mod number divisor) 0)
+        (if (equal (% number divisor) 0)
             (setq divisor-count (+ 2 divisor-count)))
         (setq divisor (+ 1 divisor)))
       (if (equal divisor-count 2)
@@ -114,7 +114,7 @@
   (let ((divisor 1) (divisor-count 0) (quotient number))
     (dotimes (x (- quotient 1))
       (setq quotient (/ number divisor))
-      (if (equal (mod number divisor) 0)
+      (if (equal (% number divisor) 0)
           (setq divisor-count (+ 2 divisor-count)))
       (setq divisor (+ 1 divisor)))
     (if (equal divisor-count 2)
