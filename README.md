@@ -6,6 +6,6 @@
 
 - The "Miscellaneous" folder contains some Elisp files I wrote to help me better understand the language.  They have nothing to do with any of the assignments.
 
-- The "Remove.sh" script simply removes backup and temporary files created by Emacs.
+- The "[Remove.sh](https://github.com/JosephTLyons/Lisp-Elisp/blob/master/Remove.sh)" script simply removes backup and temporary files created by Emacs.
 
 - **WARNING**: These solutions are only synced to my GitHub account for the sole purpose of personal backup!  This repository was private when working through the course, but if it ever becomes a public repository, **please do not use these solutions for your assignments**.
