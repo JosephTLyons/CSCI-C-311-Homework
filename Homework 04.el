@@ -6,7 +6,7 @@
 
 ;; Part 1
 (defun GCD (n m)
-  "Return the greatest common divisor of two numbers."
+  "Returns the greatest common divisor of two numbers."
   (let ((remainder 1) (dividend n) (divisor m))
     (while (not (= remainder 0))
       (setq remainder (% dividend divisor))
@@ -56,7 +56,7 @@
 ;; loops dont include the limit number, I need to change the inequality:
 ;; x < limit - 2 + 1, so  x < limit - 1.
 (defun is-prime (number)
-  "Return true if a number is prime, false if it is not."
+  "Returns true if a number is prime, false if it is not."
   (if (< number 2)
       nil
     (let ((divisor 2) (divisor-count 2) (limit (floor (sqrt number))))
@@ -113,7 +113,7 @@
 ;; is that it tests the divisors starting from 1, not 2
 ;; I feel it is a cleaner solution, but probably not as efficient
 (defun is-prime2 (number)
-  "Return true if a number is prime, false if it is not."
+  "Returns true if a number is prime, false if it is not."
   (let ((divisor 1) (divisor-count 0) (quotient number))
     (dotimes (x (- quotient 1))
       (setq quotient (/ number divisor))
