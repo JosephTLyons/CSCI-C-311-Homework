@@ -35,4 +35,27 @@
 ;(-9 -18 -27 -36 -45 -54 -63)
 
 
-;; Part 2b
+;; Part 2b - Not Done with testing requirements
+(defun is-multiple (L)
+  "Returns true if every element after the first is a multiple of the first"
+  (let ((are-multiples t) (first-value (car L)))
+    (mapc (lambda (x)
+            (if (not (= (% x first-value) 0))
+                (setq are-multiples nil)))
+          (cdr L))
+    are-multiples))
+
+(is-multiple '(1 1))
+;t
+
+(is-multiple '(1 2 3 4 5 6))
+;t
+
+(is-multiple '(3 6 9))
+;t
+
+(is-multiple '(4 3 2))
+;nil
+
+(is-multiple '(3 6 9 12 15))
+;t
