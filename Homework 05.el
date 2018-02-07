@@ -10,7 +10,7 @@
 
 ;; Part 2a
 (defun make-multiples (n m)
-  "Returns a list of multiples of value n, from 1 to m"
+  "Returns a list of values obtained by mulitplying n by number 1 through m"
   (let ((temp-list '()))
     (dotimes (x m)
       (setq temp-list (append temp-list (list (* (+ x 1) n)))))
