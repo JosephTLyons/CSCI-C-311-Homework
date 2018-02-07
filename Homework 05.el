@@ -16,7 +16,10 @@
       (setq temp-list (append temp-list (list (* (+ x 1) n)))))
     temp-list))
 
-(make-multiples 1 1) ; Testing some simple cases
+(make-multiples 0 3) ; Testing some simple cases
+;(0 0 0)
+
+(make-multiples 1 1)
 ;(1)
 
 (make-multiples 1 6)
