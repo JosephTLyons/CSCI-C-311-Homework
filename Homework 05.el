@@ -38,7 +38,7 @@
 ;(-9 -18 -27 -36 -45 -54 -63)
 
 
-;; Part 2b - Not Done with testing requirements
+;; Part 2b
 (defun is-multiple (L)
   "Returns true if every element after the first is a multiple of the first"
   (let ((are-multiples t) (first-value (car L)))
