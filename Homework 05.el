@@ -75,5 +75,5 @@
 (is-multiple (make-multiples 3 4))
 ;t
 
-(is-multiple '(1 2 4 8 0)) ; A list the can't be made from make-multiples that is true
+(is-multiple '(1 2 0 4 8)) ; A list the can't be made from make-multiples that is true
 t
