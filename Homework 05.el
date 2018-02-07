@@ -31,5 +31,8 @@
 (make-multiples 4 12)
 ;(4 8 12 16 20 24 28 32 36 40 44 48)
 
+(make-multiples -9 7) ; Testing a case with a negative number
+;(-9 -18 -27 -36 -45 -54 -63)
+
 
 ;; Part 2b
