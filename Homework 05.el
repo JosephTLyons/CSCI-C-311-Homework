@@ -45,13 +45,13 @@
           (cdr L))
     are-multiples))
 
-(is-multiple '(1 1))
+(is-multiple '(1 1)) ; Testing some simple cases
 ;t
 
 (is-multiple '(1 2 3 4 5 6))
 ;t
 
-(is-multiple '(3 6 9))
+(is-multiple '(3 6 9)) ; Testing less trivial cases
 ;t
 
 (is-multiple '(4 3 2))
@@ -59,3 +59,14 @@
 
 (is-multiple '(3 6 9 12 15))
 ;t
+
+(is-multiple '(-4 -8 -12 -16))
+;t
+
+(is-multiple '(-4 -8 -12 -15))
+;nil
+
+(is-multiple (make-multiples 2 7)) ; Test when arg make-multiple makes is-multiple true
+;t
+
+(is-multiple (make-multiples 1 1)) ; Test when arg make-multiple makes is-multiple false
