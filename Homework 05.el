@@ -172,3 +172,6 @@
 
 (is-multiple '(1 2 0 4 8)) ; A list that can't be made from make-multiples that is true
 ;t
+
+(is-multiple '(4 16 8 20 12)) ; A list that can't be made from make-multiples that is true
+;t
