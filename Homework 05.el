@@ -57,10 +57,12 @@
   (if (not L) ; Return nil if list is empty
       nil
     (let ((exists nil) (found))
-      (while (> x (car L)) ; Find first number greater than x
+      (while (and (> x (car L)) L) ; Find first number greater than x
         (pop L))
-      (setq found (car L)) ; Assign that number to found
-      (setq exists t)
+      (if L ; If the list isn't empty
+          (progn
+            (setq found (car L)) ; Assign that number to found
+            (setq exists t)))
       (dolist (y L) ; Continue on in the rest of the list
         (if (and (<= x y) (<= y found)) ; Check if new num is between x and found
             (progn
