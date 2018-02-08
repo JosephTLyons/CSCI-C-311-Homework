@@ -50,7 +50,7 @@
 (first-fit '(-99 -66 -33 -11 -40) -40)
 ;-33
 
-(best-fit '() 1) ; Works for this case too, even though it doesn't apply to memory
+(first-fit '() 1) ; Works for this case too, even though it doesn't apply to memory
 ;nil
 
 
