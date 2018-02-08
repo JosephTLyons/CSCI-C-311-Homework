@@ -50,8 +50,17 @@
 
 ;; Part 1b
 (defun best-fit (L x)
-  "Returns the smallest number in the list that greater than or equal to x, else returns nil"
-  (first-fit (sort L '<) x))
+  "Returns the smallest number in the list thats greater than or equal to x, else returns nil"
+  (let ((exists nil) (found))
+    (setq found 100); Find a way to set a max here
+    (dolist (y (cdr L))
+      (if (and (<= x y) (<= y found))
+          (progn
+            (setq found y)
+            (setq exists t))))
+    (if exists
+        found
+      nil)))
 
 (best-fit '(-99 -66 -33 -11 -40) -40)
 ;-40
