@@ -57,7 +57,7 @@
   (if (not L) ; Return nil if list is empty
       nil
     (let ((exists nil) (found))
-      (while (and (> x (car L)) L) ; Find first number greater than x
+      (while (and L (> x (car L))) ; Find first number greater than x
         (pop L))
       (if L ; If the list isn't empty
           (progn
