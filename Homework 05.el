@@ -19,6 +19,17 @@
         (if first-value
             first-value
           nil))))
+(first-fit '() 3) ; Empty list should return nil
+;nil
+
+(first-fit '(1 2) 3)
+;nil
+
+(first-fit '(1 2 3) 3)
+;3
+
+(first-fit '(1 2 3 4) 3)
+;3
 
 
 ;; Part 1b
