@@ -72,13 +72,35 @@
           found
         nil))))
 
-(best-fit '() 3)
+(best-fit '() 3) ; Empty list should return nil
+;nil
 
-(best-fit '(1 3 2 4) 2)
-2
+(best-fit '(1) 3) ; Testing all cases leading up to a value returned
+;nil
+
+(best-fit '(1 2) 3)
+;nil
+
+(best-fit '(1 2 3) 3)
+;3
+
+(best-fit '(1 1 1) 3)
+;nil
+
+(best-fit '(1 2 3 4) 3) ; Testing one further to be sure
+;3
+
+(best-fit '(1 100 1000 10000) 543) ; Testing larger values
+;1000
+
+(best-fit '(500 400 300 200 100) 100) ; Testing descending list
+;500
+
+(best-fit '(-23 3 6 9 12 33) 5) ; Even though this problem represents memory allocation
+;6                               ; Negative numbers work with the algorithm too
 
 (best-fit '(-99 -66 -33 -11 -40) -40)
--40
+;-33
 
 ;; Part 2a
 (defun make-multiples (n m)
