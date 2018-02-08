@@ -9,15 +9,15 @@
   "Returns the first number in the list greater than or equal to x, else nil"
   (if (not L) ; Return nil if list is empty
       nil
-    (let ((first-value t) (value-found nil))
-      (while (and first-value (not value-found))
-        (setq first-value (pop L))
-        (if (not first-value) ; If end of list is reached, return nil
-            (setq value-found nil)
-          (if (>= first-value x)
-              (setq value-found t))))
-        (if first-value
-            first-value
+    (let ((found t) (exists nil)) ; found will end up holding the actual value
+      (while (and found (not exists))
+        (setq found (pop L))
+        (if (not found) ; If end of list is reached, return nil
+            (setq exists nil)
+          (if (>= found x)
+              (setq exists t))))
+        (if exists
+            found
           nil))))
 
 (first-fit '(0 0 0 0 0) 1) ; Test for when no memory is available
