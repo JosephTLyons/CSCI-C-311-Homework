@@ -11,7 +11,7 @@
       nil
     (let ((first-value t) (value-found nil))
       (while (and first-value (not value-found))
-        (setq first-value (pop L)) 
+        (setq first-value (pop L))
         (if (not first-value) ; If end of list is reached, return nil
             (setq value-found nil)
           (if (>= first-value x)
