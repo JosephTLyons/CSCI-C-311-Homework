@@ -12,14 +12,18 @@
     (let ((first-value t) (value-found nil))
       (while (and first-value (not value-found))
         (setq first-value (pop L)) 
-        (if (not first-value)
+        (if (not first-value) ; If end of list is reached, return nil
             (setq value-found nil)
           (if (>= first-value x)
               (setq value-found t))))
         (if first-value
             first-value
           nil))))
+
 (first-fit '() 3) ; Empty list should return nil
+;nil
+
+(first-fit '(1) 3)
 ;nil
 
 (first-fit '(1 2) 3)
@@ -30,6 +34,12 @@
 
 (first-fit '(1 2 3 4) 3)
 ;3
+
+(first-fit '(-23 3 6 9 12 33) 5)
+;6
+
+(first-fit '(-99 -66 -33) -40) ; Even though this problem represents memory allocation
+;-33                           ; Negative numbers work with the algorithm too
 
 
 ;; Part 1b
