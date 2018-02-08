@@ -6,7 +6,7 @@
 
 ;; Part 1a
 (defun first-fit (L x)
-  "Returns the first number in the list greater than or equal to x, else returns nil"
+  "Returns the first number in the list greater than or equal to x, else nil"
   (if (not L) ; Return nil if list is empty
       nil
     (let ((first-value t) (value-found nil))
@@ -53,7 +53,7 @@
 
 ;; Part 1b
 (defun best-fit (L x)
-  "Returns the smallest number in the list thats greater than or equal to x, else returns nil"
+  "Returns the smallest number in the list thats greater than or equal to x, else nil"
   (if (not L) ; Return nil if list is empty
       nil
     (let ((exists nil) (found))
