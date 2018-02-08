@@ -51,19 +51,29 @@
 ;; Part 1b
 (defun best-fit (L x)
   "Returns the smallest number in the list thats greater than or equal to x, else returns nil"
-  (let ((exists nil) (found))
-    (setq found 100); Find a way to set a max here
-    (dolist (y (cdr L))
-      (if (and (<= x y) (<= y found))
-          (progn
-            (setq found y)
-            (setq exists t))))
-    (if exists
-        found
-      nil)))
+  (if (not L)  ; Return nil if list is empty
+      nil
+    (let ((exists nil) (found))
+      (while (> x (car L)) ; Find first number greater than x
+        (pop L))
+      (setq found (car L)) ; Assign that number to found
+      (setq exists t)
+      (dolist (y L) ; Continue on in the rest of the list
+        (if (and (<= x y) (<= y found)) ; Check if new num is between x and found
+            (progn
+              (setq found y) ; If so, update found
+              (setq exists t))))
+      (if exists
+          found
+        nil))))
+
+(best-fit '() 3)
+
+(best-fit '(1 3 2 4) 2)
+2
 
 (best-fit '(-99 -66 -33 -11 -40) -40)
-;-40
+-40
 
 ;; Part 2a
 (defun make-multiples (n m)
