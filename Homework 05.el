@@ -50,7 +50,11 @@
 
 ;; Part 1b
 (defun best-fit (L x)
+  "Returns the smallest number in the list that greater than or equal to x, else returns nil"
+  (first-fit (sort L '<) x))
 
+(best-fit '(-99 -66 -33 -11 -40) -40)
+;-40
 
 ;; Part 2a
 (defun make-multiples (n m)
