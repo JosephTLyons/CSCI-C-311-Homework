@@ -20,7 +20,10 @@
             first-value
           nil))))
 
-(first-fit '() 3) ; Empty list should return nil
+(first-fit '(0 0 0 0 0) 1) ; Test for when no memory is available
+;nil
+
+(first-fit '(1 1 1) 3)
 ;nil
 
 (first-fit '(1) 3) ; Testing all cases leading up to a value returned
@@ -31,9 +34,6 @@
 
 (first-fit '(1 2 3) 3)
 ;3
-
-(first-fit '(1 1 1) 3)
-;nil
 
 (first-fit '(1 2 3 4) 3) ; Testing one further to be sure
 ;3
@@ -50,7 +50,7 @@
 (first-fit '(-99 -66 -33 -11 -40) -40)
 ;-33
 
-(first-fit '(0 0 0 0 0) 1) ; And even when no memory is available
+(best-fit '() 1) ; Works for this case too, even though it doesn't apply to memory
 ;nil
 
 
@@ -75,17 +75,17 @@
           found
         nil))))
 
-(best-fit '() 1) ; Empty list should return nil
+(best-fit '(0 0 0 0 0) 1) ; Test for when no memory is available
 ;nil
 
-(best-fit '(1) 2) ; Testing all cases leading up to a value returned
+(best-fit '(1 1 1) 3)
+;nil
+
+(best-fit '(1) 2)
 ;nil
 
 (best-fit '(1 2 3) 3)
 ;3
-
-(best-fit '(1 1 1) 3)
-;nil
 
 (best-fit '(5 4 3 2) 3)
 ;3
@@ -99,7 +99,7 @@
 (best-fit '(-99 -66 -33 -11 -40) -40)
 ;-40
 
-(best-fit '(0 0 0 0 0) 1) ; And even when no memory is available
+(best-fit '() 1) ; Works for this case too, even though it doesn't apply to memory
 ;nil
 
 
