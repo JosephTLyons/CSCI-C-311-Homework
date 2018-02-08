@@ -23,7 +23,7 @@
 (first-fit '() 3) ; Empty list should return nil
 ;nil
 
-(first-fit '(1) 3)
+(first-fit '(1) 3) ; Testing all cases leading up to a value returned
 ;nil
 
 (first-fit '(1 2) 3)
@@ -32,20 +32,25 @@
 (first-fit '(1 2 3) 3)
 ;3
 
-(first-fit '(1 2 3 4) 3)
+(first-fit '(1 2 3 4) 3) ; Testing one further to be sure
 ;3
 
-(first-fit '(-23 3 6 9 12 33) 5)
-;6
-
-(first-fit '(1 100 1000 10000) 543)
+(first-fit '(1 100 1000 10000) 543) ; Testing larger values
 ;1000
 
-(first-fit '(-99 -66 -33) -40) ; Even though this problem represents memory allocation
-;-33                           ; Negative numbers work with the algorithm too
+(first-fit '(500 400 300 200 100) 100) ; Testing descending list
+;500
+
+(first-fit '(-23 3 6 9 12 33) 5) ; Even though this problem represents memory allocation
+;6                               ; Negative numbers work with the algorithm too
+
+(first-fit '(-99 -66 -33) -40)
+;-33
 
 
 ;; Part 1b
+(defun best-fit (L x)
+
 
 ;; Part 2a
 (defun make-multiples (n m)
