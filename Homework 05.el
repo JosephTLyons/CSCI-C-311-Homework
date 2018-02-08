@@ -50,6 +50,9 @@
 (first-fit '(-99 -66 -33 -11 -40) -40)
 ;-33
 
+(first-fit '(0 0 0 0 0) 1) ; And even when no memory is available
+;nil
+
 
 ;; Part 1b
 (defun best-fit (L x)
@@ -95,6 +98,9 @@
 
 (best-fit '(-99 -66 -33 -11 -40) -40)
 ;-40
+
+(best-fit '(0 0 0 0 0) 1) ; And even when no memory is available
+;nil
 
 
 ;; Part 2a
