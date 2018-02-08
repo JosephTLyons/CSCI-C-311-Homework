@@ -51,7 +51,7 @@
 ;; Part 1b
 (defun best-fit (L x)
   "Returns the smallest number in the list thats greater than or equal to x, else returns nil"
-  (if (not L)  ; Return nil if list is empty
+  (if (not L) ; Return nil if list is empty
       nil
     (let ((exists nil) (found))
       (while (> x (car L)) ; Find first number greater than x
