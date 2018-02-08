@@ -5,6 +5,21 @@
 
 
 ;; Part 1a
+(defun first-fit (L x)
+  "Returns the first number in the list greater than or equal to x, else returns nil"
+  (if (not L) ; Return nil if list is empty
+      nil
+    (let ((first-value t) (value-found nil))
+      (while (and first-value (not value-found))
+        (setq first-value (pop L)) 
+        (if (not first-value)
+            (setq value-found nil)
+          (if (>= first-value x)
+              (setq value-found t))))
+        (if first-value
+            first-value
+          nil))))
+
 
 ;; Part 1b
 
