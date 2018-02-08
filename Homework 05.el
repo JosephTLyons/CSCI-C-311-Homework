@@ -38,6 +38,9 @@
 (first-fit '(-23 3 6 9 12 33) 5)
 ;6
 
+(first-fit '(1 100 1000 10000) 543)
+;1000
+
 (first-fit '(-99 -66 -33) -40) ; Even though this problem represents memory allocation
 ;-33                           ; Negative numbers work with the algorithm too
 
