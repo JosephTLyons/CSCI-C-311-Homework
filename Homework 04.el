@@ -1,6 +1,7 @@
 ;; Joseph Lyons
 ;; C311 - Spring 2018
 ;; Homework 4
+;; Grade Received: 19/20 +1 bonus for "professional looking homework"
 ;; Expressions are followed by their evaluated forms in the next line
 
 

@@ -1,6 +1,7 @@
 ;; Joseph Lyons
 ;; C311 - Spring 2018
 ;; Homework 1
+;; Grade Received: 20/20
 ;; Expressions are followed by their evaluated forms in the next line
 
 
