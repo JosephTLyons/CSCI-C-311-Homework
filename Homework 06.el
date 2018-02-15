@@ -67,7 +67,7 @@
 ;sunday
 
 
-;; Part 2b - not done, still prints a "t"
+;; Part 2b
 ;; Symbols in Lisp
 (setq Days '(sunday monday tuesday wednesday thursday friday saturday))
 
@@ -122,5 +122,5 @@
         (setq second-counter (+ second-counter 1))))))
 
 ;; Is first part correct?
-;; Is second part correct?
+;; Is part 2a and 2b working with symbols?
 ;; How to keep third and fourth part from returning a visible 't' or 'nil'
