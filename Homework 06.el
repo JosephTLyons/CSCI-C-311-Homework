@@ -231,4 +231,3 @@
 
 
 ;; Is first part correct?
-;; Is part 2a and 2b working with symbols? (DOUBLE CHECK)
