@@ -76,22 +76,33 @@
     (princ (capitalize (symbol-name (elt days rand-num))))
     (princ " and tomorrow will be ")
     (princ (capitalize (symbol-name (next-day (elt days rand-num))))))
-  t)
+  (princ "\n"))
+
 
 (random-day)
-;Today is Saturday and tomorrow will be Sundayt
+;Today is Saturday and tomorrow will be Sunday
+;"
+;"
 
 (random-day)
-;Today is Friday and tomorrow will be Saturdayt
+;Today is Friday and tomorrow will be Saturday
+;"
+;"
 
 (random-day)
-;Today is Tuesday and tomorrow will be Wednesdayt
+;Today is Tuesday and tomorrow will be Wednesday
+;"
+;"
 
 (random-day)
-;Today is Thursday and tomorrow will be Fridayt
+;Today is Thursday and tomorrow will be Friday
+;"
+;"
 
 (random-day)
-;Today is Monday and tomorrow will be Tuesdayt
+;Today is Monday and tomorrow will be Tuesday
+;"
+;"
 
 
 ;; Part 3 (Optional, Extra Credit)
