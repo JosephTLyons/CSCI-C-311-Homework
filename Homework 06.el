@@ -120,6 +120,73 @@
         (setq day-count (+ day-count 1))
         (setq second-counter (+ second-counter 1))))))
 
+(calendar 0 30)      ; Testing all cases 0 - 6 with different day amounts
+;S  M  T  W  T  F  S
+;1  2  3  4  5  6  7
+;8  9  10 11 12 13 14
+;15 16 17 18 19 20 21
+;22 23 24 25 26 27 28
+;29 30 nil
+
+(calendar 1 31)
+;S  M  T  W  T  F  S
+;   1  2  3  4  5  6
+;7  8  9  10 11 12 13
+;14 15 16 17 18 19 20
+;21 22 23 24 25 26 27
+;28 29 30 31 nil
+
+(calendar 2 30)
+;S  M  T  W  T  F  S
+;      1  2  3  4  5
+;6  7  8  9  10 11 12
+;13 14 15 16 17 18 19
+;20 21 22 23 24 25 26
+;27 28 29 30 nil
+
+(calendar 3 31)
+;S  M  T  W  T  F  S
+;         1  2  3  4
+;5  6  7  8  9  10 11
+;12 13 14 15 16 17 18
+;19 20 21 22 23 24 25
+;26 27 28 29 30 31 nil
+
+(calendar 4 30)
+;S  M  T  W  T  F  S
+;            1  2  3
+;4  5  6  7  8  9  10
+;11 12 13 14 15 16 17
+;18 19 20 21 22 23 24
+;25 26 27 28 29 30 nil
+
+(calendar 5 31)
+;S  M  T  W  T  F  S
+;               1  2
+;3  4  5  6  7  8  9
+;10 11 12 13 14 15 16
+;17 18 19 20 21 22 23
+;24 25 26 27 28 29 30
+;31 nil
+
+(calendar 6 30)
+;S  M  T  W  T  F  S
+;                  1
+;2  3  4  5  6  7  8
+;9  10 11 12 13 14 15
+;16 17 18 19 20 21 22
+;23 24 25 26 27 28 29
+;30 nil
+
+(calendar 7 31)      ; Testing a case where first number "overflows", but it still works
+;S  M  T  W  T  F  S
+;1  2  3  4  5  6  7
+;8  9  10 11 12 13 14
+;15 16 17 18 19 20 21
+;22 23 24 25 26 27 28
+;29 30 31 nil
+
+
 ;; Is first part correct?
 ;; Is part 2a and 2b working with symbols?
 ;; How to keep third and fourth part from returning a visible 't' or 'nil'
