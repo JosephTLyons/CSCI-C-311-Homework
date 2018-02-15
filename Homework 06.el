@@ -67,8 +67,33 @@
 ;sunday
 
 
-;; Part 2b
+;; Part 2b - not done, still prints a "t"
 ;; Symbols in Lisp
+(setq Days '(sunday monday tuesday wednesday thursday friday saturday))
+
+(defun random-day ()
+  (let ((rand-num (% (abs (random)) 7)))
+    (princ "Today is ")
+    (princ (capitalize (symbol-name (elt Days rand-num))))
+    (princ " and tomorrow will be ")
+    (princ (capitalize (symbol-name (next-day (elt Days rand-num))))))
+  t)
+
+(random-day)
+;Today is Saturday and tomorrow will be Sundayt
+
+(random-day)
+;Today is Friday and tomorrow will be Saturdayt
+
+(random-day)
+;Today is Tuesday and tomorrow will be Wednesdayt
+
+(random-day)
+;Today is Thursday and tomorrow will be Fridayt
+
+(random-day)
+;Today is Monday and tomorrow will be Tuesdayt
+
 
 ;; Part 3 (Optional, Extra Credit)
 ;; Prints calendar
