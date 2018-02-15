@@ -97,7 +97,7 @@
 
 ;; Part 3 (Optional, Extra Credit)
 ;; Prints calendar
-(defun calendar (start-day day-amount)
+(defun calendar (start-day day-limit)
   (dolist (x Days) ; Print Days of the Week
     (princ (capitalize (substring (symbol-name x) 0 1)))
     (princ "  "))
@@ -105,17 +105,22 @@
   (setq start-day (% start-day 7)) ; Keep spacing before days start from going off calendar
   (dotimes (x start-day) ; Print the space before the days start
     (princ "   "))
-  (let ((days 1))
-    (while (not (equal (% (+ days start-day) 7) 0)) ; print first line of days
-      (princ days)
+  (let ((day-count 1))
+    (while (<= (+ day-count start-day) 7) ; print first line of days
+      (princ day-count)
       (princ "  ")
-      (setq days (+ days 1)))
-    (while (<= days day-amount) ; print rest of the days after first line
-      (if (equal (% days 7) 0)
-          (princ "\n"))
-      (princ days)
-      (if (<= days 9)
-        (princ "  ")
-        (princ " "))
-      (setq days (+ days 1)))))
+      (setq day-count (+ day-count 1)))
+    (let ((second-counter 0))
+      (while (<= day-count day-limit) ; print rest of the days after first line
+        (if (equal (% second-counter 7) 0)
+            (princ "\n"))
+        (princ day-count)
+        (if (<= day-count 9)
+            (princ "  ")
+          (princ " "))
+        (setq day-count (+ day-count 1))
+        (setq second-counter (+ second-counter 1))))))
 
+;; Is first part correct?
+;; Is second part correct?
+;; How to keep third and fourth part from returning a visible 't' or 'nil'
