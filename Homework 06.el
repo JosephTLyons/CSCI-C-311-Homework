@@ -71,4 +71,19 @@
 ;; Symbols in Lisp
 
 ;; Part 3 (Optional, Extra Credit)
-;;
+;; Prints calendar
+(defun calendar (start-day day-amount)
+  (dolist (x Days) ; Print Days of the Week
+    (princ (capitalize (substring (symbol-name x) 0 1)))
+    (princ "  "))
+  (princ "\n")
+  (setq start-day (% start-day 7)) ; Keep spacing before days start from going off calendar
+  (dotimes (x start-day) ; Print the space before the days start
+    (princ "   "))
+  (dotimes (x day-amount)
+    (if (equal (% (+ x start-day) 7) 0)
+        (princ "\n")
+    (princ (+ x 1))
+    (if (> (+ x 1) 9)
+        (princ " ")
+      (princ "  ")))))
