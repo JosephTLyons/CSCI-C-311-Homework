@@ -78,6 +78,8 @@
     (princ (capitalize (symbol-name (next-day (elt days rand-num))))))
   (princ "\n"))
 
+;; Newlines at the end cause the function to both print a newline and return one
+;; So there is an extra set of "" at the end of the evaluated forms that I can't help
 
 (random-day)
 ;Today is Saturday and tomorrow will be Sunday
@@ -131,6 +133,9 @@
         (setq day-count (+ day-count 1))
         (setq counter (+ counter 1)))))
   (princ "\n"))
+
+;; Newlines at the end cause the function to both print a newline and return one
+;; So there is an extra set of "" at the end of the evaluated forms that I can't help
 
 (calendar 4 28)      ; February 2018
 ;S  M  T  W  T  F  S
