@@ -68,14 +68,14 @@
 
 ;; Part 2b
 ;; Symbols in Lisp
-(setq Days '(sunday monday tuesday wednesday thursday friday saturday))
+(setq days '(sunday monday tuesday wednesday thursday friday saturday))
 
 (defun random-day ()
   (let ((rand-num (% (abs (random)) 7)))
     (princ "Today is ")
-    (princ (capitalize (symbol-name (elt Days rand-num))))
+    (princ (capitalize (symbol-name (elt days rand-num))))
     (princ " and tomorrow will be ")
-    (princ (capitalize (symbol-name (next-day (elt Days rand-num))))))
+    (princ (capitalize (symbol-name (next-day (elt days rand-num))))))
   t)
 
 (random-day)
@@ -97,7 +97,7 @@
 ;; Part 3 (Optional, Extra Credit)
 ;; Prints calendar
 (defun calendar (start-day day-limit)
-  (dolist (x Days) ; Print Days of the Week
+  (dolist (x days) ; Print days of the Week
     (princ (capitalize (substring (symbol-name x) 0 1)))
     (princ "  "))
   (princ "\n")
