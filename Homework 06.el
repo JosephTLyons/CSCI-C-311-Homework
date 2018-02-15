@@ -232,5 +232,3 @@
 
 ;; Is first part correct?
 ;; Is part 2a and 2b working with symbols? (DOUBLE CHECK)
-;; How to keep third and fourth part from returning a visible 't' or 'nil'
-;; REDO THE TESTS AFTER IT IS FIGURED OUT TO REMOVE THE "t" OR "nil" VALUES
