@@ -8,7 +8,6 @@
 ;; Recursion
 ;; Draw the recursion tree for the function merge sort seen in C243 applied to the array:
 ;; | 17 | 8 | 3 | 11 | 18 | 2 | 5 | 1 |
-
 ;; m() = merge()
 ;;                            m(| 17 | 8 | 3 | 11 | 18 | 2 | 5 | 1 |)
 ;;                                                |
