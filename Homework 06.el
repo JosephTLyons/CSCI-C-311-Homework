@@ -105,10 +105,17 @@
   (setq start-day (% start-day 7)) ; Keep spacing before days start from going off calendar
   (dotimes (x start-day) ; Print the space before the days start
     (princ "   "))
-  (dotimes (x day-amount)
-    (if (equal (% (+ x start-day) 7) 0)
-        (princ "\n")
-    (princ (+ x 1))
-    (if (> (+ x 1) 9)
-        (princ " ")
-      (princ "  ")))))
+  (let ((days 1))
+    (while (not (equal (% (+ days start-day) 7) 0)) ; print first line of days
+      (princ days)
+      (princ "  ")
+      (setq days (+ days 1)))
+    (while (<= days day-amount) ; print rest of the days after first line
+      (if (equal (% days 7) 0)
+          (princ "\n"))
+      (princ days)
+      (if (<= days 9)
+        (princ "  ")
+        (princ " "))
+      (setq days (+ days 1)))))
+
