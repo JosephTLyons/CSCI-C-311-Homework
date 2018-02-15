@@ -3,6 +3,7 @@
 ;; Homework 6
 ;; Expressions are followed by their evaluated forms in the next line
 
+
 ;; Part 1
 ;; Recursion
 ;; Draw the recursion tree for the function merge sort seen in C243 applied to the array
