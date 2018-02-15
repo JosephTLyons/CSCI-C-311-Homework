@@ -109,16 +109,16 @@
       (princ day-count)
       (princ "  ")
       (setq day-count (+ day-count 1)))
-    (let ((second-counter 0))
+    (let ((counter 0))
       (while (<= day-count day-limit) ; print rest of the days after first line
-        (if (equal (% second-counter 7) 0)
+        (if (equal (% counter 7) 0)
             (princ "\n"))
         (princ day-count)
         (if (<= day-count 9)
             (princ "  ")
           (princ " "))
         (setq day-count (+ day-count 1))
-        (setq second-counter (+ second-counter 1))))))
+        (setq counter (+ counter 1))))))
 
 (calendar 4 28)      ; February 2018
 ;S  M  T  W  T  F  S  
