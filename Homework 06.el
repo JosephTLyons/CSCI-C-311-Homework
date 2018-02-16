@@ -228,6 +228,3 @@
 ;29 30 31
 ;"
 ;"
-
-
-;; Is first part correct?
