@@ -118,12 +118,12 @@
   (dotimes (x start-day) ; Print the space before the days start
     (princ "   "))
   (let ((day-count 1))
-    (while (<= (+ day-count start-day) 7) ; print first line of days
+    (while (<= (+ day-count start-day) 7) ; Print first line of days
       (princ day-count)
       (princ "  ")
       (setq day-count (+ day-count 1)))
     (let ((counter 0))
-      (while (<= day-count day-limit) ; print rest of the days after first line
+      (while (<= day-count day-limit) ; Print rest of the days after first line
         (if (equal (% counter 7) 0)
             (princ "\n"))
         (princ day-count)
