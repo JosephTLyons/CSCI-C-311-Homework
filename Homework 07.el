@@ -19,6 +19,7 @@
 
 ;; Steps to transforming a tail recursive function into an interative function:
 ;; 1) Negate the recursive condition and use it as the condition of the iterative while loop
+;;    If multiple base cases exist, link them with an "and" operator in the iterative version
 ;; 2) Transform recursive calls into assignments of the variables
 ;; 3) The return value comes from the base cases
 
