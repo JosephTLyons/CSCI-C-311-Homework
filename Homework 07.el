@@ -15,7 +15,7 @@
     (car L))
    ((= (% (random) 2) 0) ; Base case 3
     (car L))
-   (t (random-select (cdr L))))) ; Terminating condition
+   (t (random-select (cdr L)))))
 
 ;; Steps to transforming a tail recursive function into an interative function:
 ;; 1) Negate the recursive condition and use it as the condition of the iterative while loop
