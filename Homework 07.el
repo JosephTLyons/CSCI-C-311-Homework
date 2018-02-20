@@ -5,6 +5,14 @@
 
 
 ;; Part 1
+;; Write a function that sorts an array using any of the sorting algorithms from C243.
+;; Verify that the array being passed in is in fact an array with arrayp
+;; Return the sorted array
+
+;; Using Bubble Sort
+(defun bubblle-sort (L)
+
+
 ;; Transform the following recursive function into an iterative one:
 
 ;; Recursive version
