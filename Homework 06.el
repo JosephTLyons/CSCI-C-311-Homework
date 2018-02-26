@@ -27,6 +27,7 @@
 ;; Part 2a
 ;; Symbols in Lisp
 (defun next-day (day)
+  "Receives a symbol for a day, prints the next one in the week out"
   (let ((next))
     (if (equal "sunday" (symbol-name day))
         (setq next 'monday)
@@ -71,6 +72,7 @@
 (setq days '(sunday monday tuesday wednesday thursday friday saturday))
 
 (defun random-day ()
+  "Prints a random day of the week and the next one after it"
   (let ((rand-num (% (abs (random)) 7)))
     (princ "Today is ")
     (princ (capitalize (symbol-name (elt days rand-num))))
@@ -110,6 +112,7 @@
 ;; Part 3 (Optional, Extra Credit)
 ;; Prints calendar
 (defun calendar (start-day day-limit)
+  "Prints a calendar out"
   (dolist (x days) ; Print days of the Week
     (princ (capitalize (substring (symbol-name x) 0 1)))
     (princ "  "))
