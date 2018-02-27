@@ -34,6 +34,9 @@
 (bubble-sort '[2000 50 12 70000 400 300 1]) ; Testing bigger numbers
 ;[1 12 50 300 400 2000 70000]
 
+(bubble-sort 'a) ; Simply returns item if it is not an array
+;a
+
 
 ;; Part 2
 ;; Transform the following recursive function into an iterative one:
