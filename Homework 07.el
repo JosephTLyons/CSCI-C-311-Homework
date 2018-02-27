@@ -8,9 +8,25 @@
 ;; Write a function that sorts an array using any of the sorting algorithms from C243.
 ;; Verify that the array being passed in is in fact an array with arrayp
 ;; Return the sorted array
-
 ;; Using Bubble Sort
-(defun bubblle-sort (L)
+(defun bubble-sort (A)
+  "Sorts an array using the Bubble Sort method."
+  (if (arrayp A)
+      (let ((i 0) (j 0) (size (length A)) (temp))
+        (while (< i (- size 1))
+          (while (< j (- (- size i) 1))
+            (if (> (elt A j) (elt A (+ j 1)))
+                (progn
+                  (setq temp (elt A j))
+                  (aset A j (elt A (+ j 1)))
+                  (aset A (+ j 1) temp))
+            (setq j (+ j 1))))
+          (setq i (+ i 1)))))
+  A)
+
+(bubble-sort '[1 4 2 3 0 -1])
+
+
 
 
 ;; Part 2
