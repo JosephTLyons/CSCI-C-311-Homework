@@ -45,7 +45,7 @@
 ;; Part 4
 ;; Functions with Unlimited Number of Parameters
 (defun sum-numbers (&rest L)
-  "Returns the sum of all numbers being passed in"
+  "Returns the sum of all numbers being passed in."
   (let ((sum 0))
     (while L
       (if (numberp (car L))
