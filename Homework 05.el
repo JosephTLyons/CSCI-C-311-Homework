@@ -6,7 +6,7 @@
 
 ;; Part 1a
 (defun first-fit (L x)
-  "Returns the first number in the list greater than or equal to x, else nil"
+  "Returns the first number in the list greater than or equal to x, else nil."
   (if (not L) ; Return nil if list is empty
       nil
     (let ((found t) (exists nil)) ; found will end up holding the actual value
@@ -56,7 +56,7 @@
 
 ;; Part 1b
 (defun best-fit (L x)
-  "Returns the smallest number in the list thats greater than or equal to x, else nil"
+  "Returns the smallest number in the list thats greater than or equal to x, else nil."
   (if (not L) ; Return nil if list is empty
       nil
     (let ((exists nil) (found))
@@ -105,7 +105,7 @@
 
 ;; Part 2a
 (defun make-multiples (n m)
-  "Returns a list of values obtained by mulitplying n by number 1 through m"
+  "Returns a list of values obtained by mulitplying n by number 1 through m."
   (let ((temp-list '()))
     (dotimes (x m)
       (setq temp-list (append temp-list (list (* (+ x 1) n)))))
@@ -135,7 +135,7 @@
 
 ;; Part 2b
 (defun is-multiple (L)
-  "Returns true if every element after the first is a multiple of the first"
+  "Returns true if every element after the first is a multiple of the first."
   (let ((are-multiples t) (first-value (car L)))
     (mapc (lambda (x)
             (if (not (= (% x first-value) 0))

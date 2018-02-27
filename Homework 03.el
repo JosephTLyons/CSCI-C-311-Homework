@@ -41,7 +41,7 @@
 
 
 (defun element-i (L i)
-  "Returns the ith element in the list"
+  "Returns the ith element in the list."
   (if (> i (length L))
       nil
       (dotimes (x (+ 1 i) number-returned) ; loop 0 to i + 1 to adjust for
@@ -102,7 +102,7 @@
 
 
 (defun reverse (L)
-  "Returns the list in reverse order"
+  "Returns the list in reverse order."
   (let ((backwards '()))
     (dolist (x L backwards)
       (setq backwards (append (list x) backwards)))))
