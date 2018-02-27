@@ -5,30 +5,34 @@
 
 
 ;; Part 1
-;; Write a function that sorts an array using any of the sorting algorithms from C243.
-;; Verify that the array being passed in is in fact an array with arrayp
-;; Return the sorted array
-;; Using Bubble Sort
+;; Using Arrays in Lisp
+;; Bubble Sort
 (defun bubble-sort (A)
   "Sorts an array using the Bubble Sort method."
   (if (arrayp A)
-      (let ((i 0) (j 0) (swapped t) (size (length A)) (temp))
-        (while (and (< i (- size 1)) swapped)
+      (let ((i 0) (j 0) (swapped t) (n (length A)) (temp))
+        (while (and (< i (- n 1)) swapped)
+          (setq j 0)
           (setq swapped nil)
-          (while (< j (- (- size i) 1))
+          (while (< j (- (- n i) 1))
             (if (> (elt A j) (elt A (+ j 1)))
                 (progn
                   (setq temp (elt A j))
                   (aset A j (elt A (+ j 1)))
                   (aset A (+ j 1) temp)
-                  (setq swapped t))
-            (setq j (+ j 1))))
-          (setq i (+ i 1)))))
-  A)
+                  (setq swapped t)))
+            (setq j (+ j 1)))
+          (setq i (+ i 1)))
+  A)))
 
-(bubble-sort '[1 4 2 3 0 -1])
+(bubble-sort '[1 4 2 3 0 -1]) ; Testing a random case
+;[-1 0 1 2 3 4]
 
+(bubble-sort '[4 3 2 1 0 -1 -2 -3 -4]) ; Testing worst case scenario
+;[-4 -3 -2 -1 0 1 2 3 4]
 
+(bubble-sort '[2000 50 12 70000 400 300 1]) ; Testing bigger numbers
+;[1 12 50 300 400 2000 70000]
 
 
 ;; Part 2
