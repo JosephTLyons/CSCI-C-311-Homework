@@ -40,3 +40,30 @@
 
 
 ;; Part 3
+
+
+;; Part 4
+;; Functions with Unlimited Number of Parameters
+(defun sum-numbers (&rest L)
+  "Returns the sum of all numbers being passed in"
+  (let ((sum 0))
+    (while L
+      (if (numberp (car L))
+          (setq sum (+ sum (car L))))
+      (pop L))
+    sum))
+
+(sum-numbers 1 2 3 4) ; A test for just integers
+;10
+
+(sum-numbers 1.1 2 3.14 5) ; A mixture of integers and floats
+;11.24
+
+(sum-numbers 1 "dog" 'a '(1 2 3 4 5) 9) ; A case where some parameters are numbers
+;10
+
+(sum-numbers 'a 'b 'c "cat" '(10 9 8)) ; A case when no parameters are numbers
+;0
+
+(sum-numbers 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20) ; Testing many parameters
+;210
