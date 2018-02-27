@@ -22,8 +22,8 @@
                   (aset A (+ j 1) temp)
                   (setq swapped t)))
             (setq j (+ j 1)))
-          (setq i (+ i 1)))
-  A)))
+          (setq i (+ i 1)))))
+  A)
 
 (bubble-sort '[1 4 2 3 0 -1]) ; Testing a random case
 ;[-1 0 1 2 3 4]
