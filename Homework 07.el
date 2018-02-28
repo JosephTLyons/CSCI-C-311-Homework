@@ -112,19 +112,19 @@
 
 ;; a
 ;; Convert to tail-recursive function
-(defun count-val (L val result)
+(defun count-val-tail (L val result)
   "Counts occurrences of a specified value in a list."
   (cond ((not L) result)
         ((equal (car L) val)
-         (count-val (cdr L) val (+ result 1)))
-        (t (count-val (cdr L) val (+ result 0)))))
+         (count-val-tail (cdr L) val (+ result 1)))
+        (t (count-val-tail (cdr L) val (+ result 0)))))
 
-(count-val '(3 2 7 1 7 2 7) 7 0)
+(count-val-tail '(3 2 7 1 7 2 7) 7 0)
 ;3
 
 ;; b
 ;; Convert to iterative function
-(defun count-val (L val result)
+(defun count-val-iter (L val)
   "Counts occurrences of a specified value in a list."
   (cond ((not L) result)
         ((equal (car L) val)
