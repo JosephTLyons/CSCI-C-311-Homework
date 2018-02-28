@@ -109,6 +109,17 @@
 (count-val '(3 2 7 1 7 2 7) 7) ; 3
 
 ;; a
+(defun count-val (L val result)
+  "Counts occurrences of a specified value in a list."
+  (cond ((not L) result)
+        ((equal (car L) val)
+         (count-val (cdr L) val (+ result 1)))
+        (t (count-val (cdr L) val (+ result 0)))))
+
+(count-val '(3 2 7 1 7 2 7) 7 0)
+3
+
+
 
 ;; b
 
