@@ -123,6 +123,14 @@
 ;3
 
 ;; b
+;; Convert to iterative function
+(defun count-val (L val result)
+  "Counts occurrences of a specified value in a list."
+  (cond ((not L) result)
+        ((equal (car L) val)
+          (count-val (cdr L) val (+ result 1)))
+        (t (count-val (cdr L) val (+ result 0)))))
+
 
 ;; Part 4
 ;; Functions with Unlimited Number of Parameters
