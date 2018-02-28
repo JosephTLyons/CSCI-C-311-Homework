@@ -107,7 +107,8 @@
         (t (count-val (cdr L) val))))
 
 ;; Example of calling this function:
-(count-val '(3 2 7 1 7 2 7) 7) ; 3
+(count-val '(3 2 7 1 7 2 7) 7)
+;3
 
 ;; a
 ;; Convert to tail-recursive function
@@ -119,9 +120,7 @@
         (t (count-val (cdr L) val (+ result 0)))))
 
 (count-val '(3 2 7 1 7 2 7) 7 0)
-3
-
-
+;3
 
 ;; b
 
