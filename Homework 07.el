@@ -110,7 +110,7 @@
 (count-val '(3 2 7 1 7 2 7) 7)
 ;3
 
-;; a
+;; 3a
 ;; Convert to tail-recursive function
 (defun count-val-tail (L val result)
   "Counts occurrences of a specified value in a list."
@@ -122,7 +122,7 @@
 (count-val-tail '(3 2 7 1 7 2 7) 7 0)
 ;3
 
-;; b
+;; 3b
 ;; Convert to iterative function
 (defun count-val-iter (L val)
   "Counts occurrences of a specified value in a list."
