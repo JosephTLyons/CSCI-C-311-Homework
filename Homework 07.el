@@ -111,7 +111,7 @@
 ;3
 
 ;; 3a
-;; Convert to tail-recursive function
+;; Convert to tail-recursive function:
 (defun count-val-tail (L val result)
   "Counts occurrences of a specified value in a list."
   (cond ((not L) result)
@@ -123,7 +123,7 @@
 ;3
 
 ;; 3b
-;; Convert to iterative function
+;; Convert to iterative function:
 (defun count-val-iter (L val)
   "Counts occurrences of a specified value in a list."
   (let ((result 0))
