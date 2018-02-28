@@ -98,6 +98,7 @@
 
 ;; Part 3
 ;; Transformation to Tail Recursion
+;; Original Function:
 (defun count-val (L val)
   "Counts occurrences of a specified value in a list."
   (cond ((not L) 0)
@@ -109,6 +110,7 @@
 (count-val '(3 2 7 1 7 2 7) 7) ; 3
 
 ;; a
+;; Convert to tail-recursive function
 (defun count-val (L val result)
   "Counts occurrences of a specified value in a list."
   (cond ((not L) result)
