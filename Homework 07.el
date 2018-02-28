@@ -97,7 +97,20 @@
 
 
 ;; Part 3
+;; Transformation to Tail Recursion
+(defun count-val (L val)
+  "Counts occurrences of a specified value in a list."
+  (cond ((not L) 0)
+        ((equal (car L) val)
+         (+ 1 (count-val (cdr L) val)))
+        (t (count-val (cdr L) val))))
 
+;; Example of calling this function:
+(count-val '(3 2 7 1 7 2 7) 7) ; 3
+
+;; a
+
+;; b
 
 ;; Part 4
 ;; Functions with Unlimited Number of Parameters
