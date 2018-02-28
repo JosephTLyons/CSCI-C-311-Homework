@@ -42,29 +42,58 @@
 
 
 ;; Part 2
+;; Tail Recursion Transformation
 ;; Transform the following recursive function into an iterative one:
-
-;; Recursive version
+;; Recursive version:
 (defun random-select (L)
+  "Selects a number from a list, using recursion."
   (cond
-   ((not L) nil)  ; Base case 1
+   ((not L) nil)  ; Base case 1 - for when list being passed in is empty
    ((not (cdr L)) ; Base case 2
     (car L))
    ((= (% (random) 2) 0) ; Base case 3
     (car L))
    (t (random-select (cdr L)))))
 
+(random-select '())
+;nil
+
+(random-select '(1 2 3 4 5 6 7 8))
+;1
+
+(random-select '(1 2 3 4 5 6 7 8))
+;5
+
+(random-select '(1 2 3 4 5 6 7 8))
+;4
+
 ;; Steps to transforming a tail recursive function into an interative function:
-;; 1) Negate the recursive condition and use it as the condition of the iterative while loop
-;;    If multiple base cases exist, link them with an "and" operator in the iterative version
-;; 2) Transform recursive calls into assignments of the variables
-;; 3) The return value comes from the base cases
+;; 1) Negate the recursive base conditions and use them as the conditions of 
+;;    the iterative while loop.  If multiple base cases exist, link them with
+;;    an "and" operator in the iterative version.
+;; 2) Transform recursive calls into assignments of the variables.
+;; 3) The return values come from the base cases.
 
-;; Iterative version
+;; Iterative version:
 (defun random-select-iter (L)
-  (while (and (L)
+  "Selects a number from a list, using iteration."
+  (while (and L (cdr L) (not (= (% (random) 2) 0)))
+    (setq L (cdr L)))
+  (if (not L)
+      nil
+    (car L)))
 
-;; Part 2
+(random-select-iter '())
+;nil
+
+(random-select-iter '(1 2 3 4 5 6 7 8))
+;5
+
+(random-select-iter '(1 2 3 4 5 6 7 8))
+;1
+
+(random-select-iter '(1 2 3 4 5 6 7 8))
+;3
 
 
 ;; Part 3
