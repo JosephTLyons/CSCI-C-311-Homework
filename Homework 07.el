@@ -126,10 +126,15 @@
 ;; Convert to iterative function
 (defun count-val-iter (L val)
   "Counts occurrences of a specified value in a list."
-  (cond ((not L) result)
-        ((equal (car L) val)
-          (count-val (cdr L) val (+ result 1)))
-        (t (count-val (cdr L) val (+ result 0)))))
+  (let ((result 0))
+  (while L
+    (if (equal (car L) val)
+        (setq result (+ result 1)))
+    (setq L (cdr L)))
+  result))
+
+(count-val-iter '(3 2 7 1 7 2 7) 7)
+;3
 
 
 ;; Part 4
