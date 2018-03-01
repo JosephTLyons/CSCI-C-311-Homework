@@ -139,11 +139,11 @@
 (defun count-val-iter (L val)
   "Counts occurrences of a specified value in a list."
   (let ((result 0))
-  (while L
-    (if (equal (car L) val)
-        (setq result (+ result 1)))
-    (setq L (cdr L)))
-  result))
+    (while L
+      (if (equal (car L) val)
+          (setq result (+ result 1)))
+      (setq L (cdr L)))
+    result))
 
 (count-val-iter '(3 2 7 1 7 2 7) 7)
 ;3
