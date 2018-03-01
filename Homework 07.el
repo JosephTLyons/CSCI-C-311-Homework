@@ -172,7 +172,7 @@
 (sum-numbers 1.1 2 3.14 5) ; A mixture of integers and floats
 ;11.24
 
-(sum-numbers 1 "dog" 'a '(1 2 3 4 5) 9) ; A case where some parameters are numbers
+(sum-numbers 1 "dog" 'a '(1 2 3 4 5) 9) ; A case where some parameters are not numbers
 ;10
 
 (sum-numbers 'a 'b 'c "cat" '(10 9 8)) ; A case when no parameters are numbers
