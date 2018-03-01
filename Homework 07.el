@@ -46,7 +46,7 @@
 ;; Transform the following recursive function into an iterative one:
 ;; Recursive version:
 (defun random-select (L)
-  "Selects a number from a list, using recursion."
+  "Selects a number from a list."
   (cond
    ((not L) nil)  ; Base case 1 - for when list being passed in is empty
    ((not (cdr L)) ; Base case 2
@@ -76,7 +76,7 @@
 
 ;; Iterative version:
 (defun random-select-iter (L)
-  "Selects a number from a list, using iteration."
+  "Selects a number from a list."
   (while (and L (cdr L) (not (= (% (random) 2) 0)))
     (setq L (cdr L)))
   (if (not L)
