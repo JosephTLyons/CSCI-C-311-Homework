@@ -42,7 +42,7 @@
 (power2 2 10 1)
 ;1024
 
-;; Iteration transformation
+;; Iterative Method (Transformation)
 (defun power3 (base exponent)
   "Computes (base)^(exponent)"
   (let ((result 1))
