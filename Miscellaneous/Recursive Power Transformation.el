@@ -28,7 +28,7 @@
   "Computes (base)^(exponent)"
   (cond
    ((= exponent 0) result)
-   (t (power base (- exponent 1) (* result base)))))
+   (t (power2 base (- exponent 1) (* result base)))))
 
 (power2 2 3 1)
 ;8
