@@ -8,7 +8,7 @@
 
 ;; Non-Tail-Recursive Power Method
 (defun power (base exponent)
-  "Computes (base)^(exponent)"
+  "Computes (base)^(exponent)."
   (cond
    ((<= exponent 0) 1)
    (t (* base (power base (- exponent 1))))))
@@ -27,7 +27,7 @@
 
 ;; Tail-Recursive Method (Transformation)
 (defun power2 (base exponent result)
-  "Computes (base)^(exponent)"
+  "Computes (base)^(exponent)."
   (cond
    ((<= exponent 0) result)
    (t (power2 base (- exponent 1) (* result base)))))
@@ -46,7 +46,7 @@
 
 ;; Iterative Method (Transformation)
 (defun power3 (base exponent)
-  "Computes (base)^(exponent)"
+  "Computes (base)^(exponent)."
   (let ((result 1))
   (while (not (<= exponent 0))
     (setq exponent (- exponent 1))
