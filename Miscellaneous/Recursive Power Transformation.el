@@ -3,6 +3,8 @@
 ;; then, transform that version to an iterative version.  This function would've been fairly
 ;; easy to make iterative to begin with, but practicing the whole process is good for when the
 ;; problems are not so easy to transform.
+;; Currently, base can be any number (positive or negative), but exponent must be a positive
+;; integer.
 
 ;; Non-Tail-Recursive Power Method
 (defun power (base exponent)
