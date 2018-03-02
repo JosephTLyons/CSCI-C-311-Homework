@@ -48,7 +48,7 @@
 (defun power3 (base exponent)
   "Computes (base)^(exponent)."
   (let ((result 1))
-  (while (not (<= exponent 0))
+  (while (> exponent 0)
     (setq exponent (- exponent 1))
     (setq result (* result base)))
   result))
