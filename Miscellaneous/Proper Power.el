@@ -1,7 +1,7 @@
-;; proper-power can compute both positive and negative exponent problems.
+;; integer-power can compute both positive and negative exponent problems.
 ;; However, the algorithm doesn't work properly for exponents that are floats.
 
-(defun proper-power (base exponent)
+(defun integer-power (base exponent)
   "Computes (base)^(exponent)."
   (let ((result 1))
     (cond
@@ -16,8 +16,8 @@
         (setq result (* result (/ 1 (* base 1.0)))))))
     result))
 
-(proper-power 3 3)
+(integer-power 3 3)
 ;27
 
-(proper-power 3 -3)
+(integer-power 3 -3)
 ;0.037037037037037035
