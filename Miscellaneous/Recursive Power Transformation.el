@@ -10,7 +10,7 @@
 (defun power (base exponent)
   "Computes (base)^(exponent)"
   (cond
-   ((= exponent 0) 1)
+   ((<= exponent 0) 1)
    (t (* base (power base (- exponent 1))))))
 
 (power 2 3)
@@ -29,7 +29,7 @@
 (defun power2 (base exponent result)
   "Computes (base)^(exponent)"
   (cond
-   ((= exponent 0) result)
+   ((<= exponent 0) result)
    (t (power2 base (- exponent 1) (* result base)))))
 
 (power2 2 3 1)
@@ -48,7 +48,7 @@
 (defun power3 (base exponent)
   "Computes (base)^(exponent)"
   (let ((result 1))
-  (while (not (= exponent 0))
+  (while (not (<= exponent 0))
     (setq exponent (- exponent 1))
     (setq result (* result base)))
   result))
