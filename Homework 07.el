@@ -116,6 +116,9 @@
 (count-val '(3 2 7 1 7 2 7) 3)
 ;1
 
+(count-val '() 3)
+;0
+
 ;; 3a
 ;; Convert to tail-recursive function:
 (defun count-val-tail (L val result)
@@ -133,6 +136,9 @@
 
 (count-val-tail '(3 2 7 1 7 2 7) 3 0)
 ;1
+
+(count-val-tail '() 3 0)
+;0
 
 ;; 3b
 ;; Convert to iterative function:
@@ -153,6 +159,9 @@
 
 (count-val-iter '(3 2 7 1 7 2 7) 3)
 ;1
+
+(count-val-iter '() 3)
+;0
 
 
 ;; Part 4
