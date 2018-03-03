@@ -1,4 +1,4 @@
-;; I wrote the Power method recursivley in a non-tail-recursive way so that I could apply
+;; I wrote the power method recursivley in a non-tail-recursive way so that I could apply
 ;; techniques I learned to first, make the non-tail-recursive function tail-recursive,
 ;; then, transform that version to an iterative version.  This function would've been fairly
 ;; easy to make iterative to begin with, but practicing the whole process is good for when the
