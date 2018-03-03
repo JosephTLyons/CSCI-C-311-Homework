@@ -123,7 +123,7 @@
   (cond ((not L) result)
         ((equal (car L) val)
          (count-val-tail (cdr L) val (+ result 1)))
-        (t (count-val-tail (cdr L) val (+ result 0)))))
+        (t (count-val-tail (cdr L) val result))))
 
 (count-val-tail '(3 2 7 1 7 2 7) 7 0)
 ;3
