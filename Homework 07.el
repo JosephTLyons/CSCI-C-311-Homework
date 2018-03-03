@@ -79,9 +79,7 @@
   "Selects a number from a list."
   (while (and L (cdr L) (not (= (% (random) 2) 0)))
     (setq L (cdr L)))
-  (if (not L)
-      nil
-    (car L)))
+  (car L))
 
 (random-select-iter '())
 ;nil
