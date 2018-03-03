@@ -1,4 +1,4 @@
-# Now deleting files recursively (for nested directories), thanks to:
+# Delete files recursively (for nested directories), thanks to:
 # https://unix.stackexchange.com/questions/116389/recursively-delete-all-files-with-a-given-extension
 
 find . -type f -name '*~' -delete
