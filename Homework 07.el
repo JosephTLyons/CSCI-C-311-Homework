@@ -4,7 +4,7 @@
 ;; Expressions are followed by their evaluated forms in the next line
 
 
-;; Part 1
+;; PART 1
 ;; Using Arrays in Lisp
 ;; Bubble Sort
 (defun bubble-sort (A)
@@ -41,7 +41,7 @@
 ;a
 
 
-;; Part 2
+;; PART 2
 ;; Tail Recursion Transformation
 ;; Transform the following recursive function into an iterative one:
 ;; Recursive version:
@@ -94,7 +94,7 @@
 ;3
 
 
-;; Part 3
+;; PART 3
 ;; Transformation to Tail Recursion
 ;; Original Function:
 (defun count-val (L val)
@@ -117,7 +117,7 @@
 (count-val '() 3)
 ;0
 
-;; 3a
+;; PART 3A
 ;; Convert to tail-recursive function:
 (defun count-val-tail (L val result)
   "Counts occurrences of a specified value in a list."
@@ -138,7 +138,7 @@
 (count-val-tail '() 3 0)
 ;0
 
-;; 3b
+;; PART 3B
 ;; Convert to iterative function:
 (defun count-val-iter (L val)
   "Counts occurrences of a specified value in a list."
@@ -162,7 +162,7 @@
 ;0
 
 
-;; Part 4
+;; PART 4
 ;; Functions with Unlimited Number of Parameters
 (defun sum-numbers (&rest L)
   "Returns the sum of all numbers being passed in."

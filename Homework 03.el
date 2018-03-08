@@ -3,7 +3,7 @@
 ;; Homework 3
 ;; Expressions are followed by their evaluated forms in the next line
 
-
+;; PART 1A
 (defun is-const (L)
   "Returns true if every element in the list is the equivalent to one another."
   (if (not L)
@@ -39,7 +39,7 @@
 (is-const '("dog" "dog" "dog" "cat"))
 ;nil
 
-
+;; PART 1B
 (defun element-i (L i)
   "Returns the ith element in the list."
   (if (> i (length L))
@@ -66,7 +66,7 @@
 (element-i '(5 6 7) 3) ; Past index of the list
 ;nil
 
-
+;; PART 1C
 (defun is-sorted (L)
   "Returns true if list is sorted in ascending order."
   (let ((previous-val (car L)) (is-ordered t))
@@ -100,7 +100,7 @@
 (is-sorted '(-2 -3 3))
 ;nil
 
-
+;; PART 1D
 (defun reverse (L)
   "Returns the list in reverse order."
   (let ((backwards '()))

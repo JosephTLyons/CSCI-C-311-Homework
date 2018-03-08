@@ -4,7 +4,7 @@
 ;; Expressions are followed by their evaluated forms in the next line
 
 
-;; Part 1a
+;; PART 1A
 (defun first-fit (L x)
   "Returns the first number in the list greater than or equal to x, else nil."
   (if (not L) ; Return nil if list is empty
@@ -54,7 +54,7 @@
 ;nil
 
 
-;; Part 1b
+;; PART 1B
 (defun best-fit (L x)
   "Returns the smallest number in the list thats greater than or equal to x, else nil."
   (if (not L) ; Return nil if list is empty
@@ -103,7 +103,7 @@
 ;nil
 
 
-;; Part 2a
+;; PART 2A
 (defun make-multiples (n m)
   "Returns a list of values obtained by mulitplying n by number 1 through m."
   (let ((temp-list '()))
@@ -133,7 +133,7 @@
 ;(-9 -18 -27 -36 -45 -54 -63)
 
 
-;; Part 2b
+;; PART 2B
 (defun is-multiple (L)
   "Returns true if every element after the first is a multiple of the first."
   (let ((are-multiples t) (first-value (car L)))

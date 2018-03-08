@@ -3,7 +3,7 @@
 ;; Homework 8
 ;; Expressions are followed by their evaluated forms in the next line
 
-;; Part 1
+;; PART 1A
 (defun bsymbol (&rest L)
     (dolist (x L)
       (if (symbolp x)

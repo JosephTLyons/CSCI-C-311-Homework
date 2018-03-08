@@ -4,7 +4,7 @@
 ;; Expressions are followed by their evaluated forms in the next line
 
 
-;; Part 1
+;; PART 1
 (defun GCD (n m)
   "Returns the greatest common divisor of two numbers."
   (let ((remainder 1) (dividend n) (divisor m))
@@ -42,7 +42,7 @@
 ;5
 
 
-;; Part 2
+;; PART 2
 ;; Logic: When a number greater than one that more than 2 divisors,
 ;; it is not prime.
 
@@ -164,7 +164,7 @@
 ;t
 
 
-;; Part 3
+;; PART 3
 (defun print-list (L)
   "Prints all the elements of a list to the screen."
   (mapc (lambda (x) (princ x) (princ " ")) L))

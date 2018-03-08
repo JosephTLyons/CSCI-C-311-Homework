@@ -4,7 +4,7 @@
 ;; Expressions are followed by their evaluated forms in the next line
 
 
-;; Part 1
+;; PART 1
 ;; Recursion
 ;; Draw the recursion tree for the function merge sort seen in C243 applied to the array:
 ;; | 17 | 8 | 3 | 11 | 18 | 2 | 5 | 1 |
@@ -24,7 +24,7 @@
 ;; m(| 17 |)   m(| 8 |)  m(| 3 |)    m(| 11 |)   m(| 18 |)   m(| 2 |)  m(| 5 |)    m(| 1 |)
 
 
-;; Part 2a
+;; PART 2A
 ;; Symbols in Lisp
 (defun next-day (day)
   "Receives a symbol for a day, prints the next one in the week out."
@@ -67,7 +67,7 @@
 ;sunday
 
 
-;; Part 2b
+;; PART 2B
 ;; Symbols in Lisp
 (setq days '(sunday monday tuesday wednesday thursday friday saturday))
 
@@ -109,7 +109,7 @@
 ;"
 
 
-;; Part 3 (Optional, Extra Credit)
+;; PART 3 (Optional, Extra Credit)
 ;; Prints calendar
 (defun calendar (start-day day-limit)
   "Prints a calendar out."
