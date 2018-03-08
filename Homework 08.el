@@ -106,6 +106,37 @@
 (f 5)
 ;3
 
+(setq store (make-vector 20 nil))
+
+;; Second version with dynamic programming optimization:
+(defun f (n)
+  (let ((res 0))
+    (cond
+     ((setq res (elt store n)) res)
+     ((= n 0) 0)
+     ((= n 1) 1)
+     ((= n 2) 1)
+     (t (+ (f (- n 1)) (f (- n 3)))))))
+
+(f 0)
+;0
+
+(f 1)
+;1
+
+(f 2)
+;1
+
+(f 3)
+;1
+
+(f 4)
+;2
+
+(f 5)
+;3
+
+
 ;; PART 3
 ;; Deep Recursion
 
