@@ -78,6 +78,31 @@
 
 ;; PART 2
 ;; Dynamic Programming
+;; First recursive version:
+(defun f (n)
+  (cond
+   ((= n 0) 0)
+   ((= n 1) 1)
+   ((= n 2) 1)
+   (t (+ (f (- n 1)) (f (- n 3))))))
+
+(f 0)
+;0
+
+(f 1)
+;1
+
+(f 2)
+;1
+
+(f 3)
+;1
+
+(f 4)
+;2
+
+(f 5)
+;3
 
 ;; PART 3
 ;; Deep Recursion
