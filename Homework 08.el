@@ -4,7 +4,7 @@
 ;; Expressions are followed by their evaluated forms in the next line
 
 
-;; PART 1
+;; PART 1 ???? (OUTPUTS OF THE SECOND VERSION ARE DIFFERENT THE SECOND TIME THROUGH.)
 ;; Dynamic Programming
 (defvar counter 0)
 
@@ -20,8 +20,6 @@
 (setq counter 0)
 ;0
 
-(comb 3 2)
-;3
 (comb 5 3)
 ;10
 
@@ -72,11 +70,11 @@
 ;15
 
 (print counter)
-;5
+;13
 
 ;; It is clear that dynamic programming reduces the amount of recursive calls needed.
 ;; With 5C3 orinally, we had 11 recursive calls.  After dynamic programming, we only had 9.
-;; With 6C4, we had 15, but after dynamic programming, we went down to 5.
+;; With 6C4, we had 19, but after dynamic programming, we went down to 13.
 
 ;; PART 2
 ;; Dynamic Programming
