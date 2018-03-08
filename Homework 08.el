@@ -143,5 +143,14 @@
 ;; PART 3
 ;; Deep Recursion
 
+(defun search-driver (L val)
+  (catch 'found)
+  (search L val))
+
+(defun search (L val)
+  (if (not L) nil
+    (dolist (elem L nil)
+      (if (equal elem val)
+          (throw 'found t)))))
 ;; PART 4
 ;; General Transformation
