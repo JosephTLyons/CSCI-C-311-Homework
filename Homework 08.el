@@ -150,7 +150,34 @@
 (defun search (L val)
   (if (not L) nil
     (dolist (elem L nil)
-      (if (equal elem val)
-          (throw 'found t)))))
+      (cond
+       ((equal elem val) (throw 'found t))
+       ((listp elem) (search elem val))))))
+
+(search-driver '() 1) ; Tests for simple cases
+;nil
+
+(search-driver '(1) 1)
+;t
+
+(search-driver '(1 2 3) 3)
+;t
+
+(search-driver '(1 '(11 12) 3 4 5) 6) ; Tests for 2 levels deep
+;nil
+
+(search-driver '(1 '(11 12) 3 4 5) 5)
+;t
+
+(search-driver '(1 '(11 12) 3 4 5) 12)
+;t
+
+(search-driver '(1 '(11 '(20 21 21)) 3 4 5) 22) ; Tests for 3 levels deep
+;nil
+
+(search-driver '(1 '(11 '(20 21 21)) 3 4 5) 21)
+;t
+
+
 ;; PART 4
 ;; General Transformation
