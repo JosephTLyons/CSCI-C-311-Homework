@@ -143,12 +143,13 @@
 
 ;; PART 3
 ;; Deep Recursion
-
 (defun search-driver (L val)
-  (catch 'found)
-  (search L val))
+  "Driver for search method, call this method when searching."
+  (catch 'found
+  (search L val)))
 
 (defun search (L val)
+  "Deeply searchs a list of elements for a value."
   (if (not L) nil
     (dolist (elem L nil)
       (cond
