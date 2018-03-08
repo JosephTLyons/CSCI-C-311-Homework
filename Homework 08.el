@@ -17,11 +17,14 @@
    (t (+ (comb (- n 1) m)
          (comb (- n 1) (- m 1))))))
 
+(setq counter 0)
+;0
+
 (comb 3 2)
 ;3
 
-(princ counter)
-;33
+(print counter)
+;3
 
 (setq counter 0)
 ;0
@@ -29,8 +32,8 @@
 (comb 5 2)
 ;10
 
-(princ counter)
-;77
+(print counter)
+;7
 
 (defun el10 (n m)
   (+ (* n 10) m))
@@ -57,8 +60,8 @@
 (comb1 3 2)
 ;3
 
-(princ counter)
-;11
+(print counter)
+;1
 
 (setq counter 0)
 ;0
@@ -66,12 +69,12 @@
 (comb1 5 2)
 ;10
 
-(princ counter)
-;55
+(print counter)
+;5
 
 ;; It is clear that dynamic programming makes these recursive functions much more efficient.
-;; With 3C2 orinally, we had 33 recursive calls.  After dynamic programming, we only had 11.
-;; With 5C2, we had 77, but after dynamic programming, we went down to 55.
+;; With 3C2 orinally, we had 3 recursive calls.  After dynamic programming, we only had 1.
+;; With 5C2, we had 7, but after dynamic programming, we went down to 5.
 
 ;; PART 2
 ;; Dynamic Programming
