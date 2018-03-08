@@ -109,7 +109,7 @@
 (setq store (make-vector 20 nil))
 
 ;; Second version with dynamic programming optimization:
-(defun f (n)
+(defun f1 (n)
   (setq counter (+ counter 1))
   (let ((temp 0) (val 0))
     (cond ((setq temp (elt store n)) temp)
@@ -118,7 +118,7 @@
             ((= n 0) (setq val 0))
             ((= n 1) (setq val 1))
             ((= n 2) (setq val 1))
-            (t (setq val (+ (f (- n 1)) (f (- n 3))))))
+            (t (setq val (+ (f1 (- n 1)) (f1 (- n 3))))))
            (aset store n val)))))
 
 (f 0)
