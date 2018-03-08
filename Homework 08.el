@@ -110,13 +110,16 @@
 
 ;; Second version with dynamic programming optimization:
 (defun f (n)
-  (let ((res 0))
-    (cond
-     ((setq res (elt store n)) res)
-     ((= n 0) 0)
-     ((= n 1) 1)
-     ((= n 2) 1)
-     (t (+ (f (- n 1)) (f (- n 3)))))))
+  (setq counter (+ counter 1))
+  (let ((temp 0) (val 0))
+    (cond ((setq temp (elt store n)) temp)
+          (t
+           (cond
+            ((= n 0) (setq val 0))
+            ((= n 1) (setq val 1))
+            ((= n 2) (setq val 1))
+            (t (setq val (+ (f (- n 1)) (f (- n 3))))))
+           (aset store n val)))))
 
 (f 0)
 ;0
