@@ -9,6 +9,7 @@
 (defvar counter 0)
 
 (defun comb (n m)
+  "Calculates nCm."
   (setq counter (+ counter 1))
   (cond
    ((= n m) 1)
@@ -41,6 +42,7 @@
 (setq C (make-vector 100 nil))
 
 (defun comb1 (n m)
+  "Caclulates nCm with dynamic programming optimizations."
   (setq counter (+ counter 1))
   (let ((res 0))
     (if (setq res (elt C (el10 n m))) res
