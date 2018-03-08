@@ -72,7 +72,7 @@
 (print counter)
 ;5
 
-;; It is clear that dynamic programming makes these recursive functions much more efficient.
+;; It is clear that dynamic programming reduces the amount of recursive calls needed.
 ;; With 3C2 orinally, we had 3 recursive calls.  After dynamic programming, we only had 1.
 ;; With 5C2, we had 7, but after dynamic programming, we went down to 5.
 
