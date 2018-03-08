@@ -4,7 +4,7 @@
 ;; Expressions are followed by their evaluated forms in the next line
 
 
-;; PART 1 ???? (OUTPUTS OF THE SECOND VERSION ARE DIFFERENT THE SECOND TIME THROUGH.)
+;; PART 1
 ;; Dynamic Programming
 (defvar counter 0)
 
