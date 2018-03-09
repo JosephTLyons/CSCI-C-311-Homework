@@ -216,7 +216,7 @@
 (setq S '(23 (51 (18) (33 (5))) (7 () (10))))
 
 (print-in-order S)
-18 51 5 33 23 7 10 nil
+;18 51 5 33 23 7 10 nil
 
 ;; PART 4AB
 (defun print-in-order1 (T)
