@@ -228,13 +228,13 @@
       (setq T (car frame) state (cdr frame))
       (if T
           (cond ((eq state 'left)
-                 (my-print (root T) " ")
                  (push (cons T 'right) stackT)
                  (push (cons (left-subtree T) 
                              'left) stackT))
                 ((eq state 'right)
                  (push (cons (right-subtree T) 
-                             'left) stackT)))))))
+                             'left) stackT)
+                 (my-print (root T) " ")))))))
 
 (print-in-order1 S)
-23 51 18 33 5 7 10 nil
+;18 51 5 33 23 7 10 nil
