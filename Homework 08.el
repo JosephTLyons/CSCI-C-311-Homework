@@ -198,7 +198,7 @@
 
 ;; PART 4AA
 (defun print-in-order (T)
-  "Prints the tree in-order.  Left - Root - Right"
+  "Recursively prints the tree in-order.  Left - Root - Right"
   (if T
       (progn
         (print-in-order (left-subtree T))
