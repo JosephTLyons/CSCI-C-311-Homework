@@ -190,12 +190,12 @@
 (defun root (T) "The root of the tree."
   (if T (car T)))
 
-(defun left-subtree (T) 
+(defun left-subtree (T)
   "The left subtree, also a list."
   (if (and T (cdr T))
     (car (cdr T)))) ; (cadr T)
 
-(defun right-subtree (T) 
+(defun right-subtree (T)
   "The right subtree, also a list."
   (if (> (length T) 2)
     (car (cdr (cdr T))))) ; (caddr T)
