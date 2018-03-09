@@ -210,3 +210,24 @@
 (print-in-order S)
 18 51 5 33 23 7 10 nil
 
+;; PART 4AB
+(defun print-in-order1 (T)
+  "Iteratively prints the tree in-order.  Left - Root - Right"
+  (let ((stackT nil) (frame nil) 
+        (state nil))
+    (push (cons T 'left) stackT)
+    (while stackT
+      (setq frame (pop stackT))
+      (setq T (car frame) state (cdr frame))
+      (if T
+          (cond ((eq state 'left)
+                 (my-print (root T) " ")
+                 (push (cons T 'right) stackT)
+                 (push (cons (left-subtree T) 
+                             'left) stackT))
+                ((eq state 'right)
+                 (push (cons (right-subtree T) 
+                             'left) stackT)))))))
+
+(print-in-order1 S)
+23 51 18 33 5 7 10 nil
