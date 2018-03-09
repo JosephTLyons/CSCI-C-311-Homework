@@ -82,63 +82,67 @@
 ;; PART 2
 ;; Dynamic Programming
 ;; First recursive version:
+
+;; I used the counter like in the first exercise
+;; to check to make sure dynamic programming was working.
 (defun f (n)
+  (setq counter (+ counter 1))
   (cond
    ((= n 0) 0)
    ((= n 1) 1)
    ((= n 2) 1)
    (t (+ (f (- n 1)) (f (- n 3))))))
 
-(f 0)
+(f 6)
+;4
+
+(f 7)
+;6
+
+(f 8)
+;9
+
+(setq counter 0)
 ;0
 
-(f 1)
-;1
+(f 9)
+;13
 
-(f 2)
-;1
-
-(f 3)
-;1
-
-(f 4)
-;2
-
-(f 5)
-;3
-
-(setq store (make-vector 20 nil))
+(print counter) ; Printing the count for (f 9) to ensure optimization worked
+;37
 
 ;; Second version with dynamic programming optimization:
+(setq store (make-vector 20 nil))
+
 (defun f1 (n)
   (setq counter (+ counter 1))
   (let ((temp 0) (val 0))
-    (cond ((setq temp (elt store n)) temp)
-          (t
-           (cond
-            ((= n 0) (setq val 0))
-            ((= n 1) (setq val 1))
-            ((= n 2) (setq val 1))
-            (t (setq val (+ (f1 (- n 1)) (f1 (- n 3))))))
-           (aset store n val)))))
+    (if (setq temp (elt store n))
+        temp
+      (cond
+       ((= n 0) (setq val 0))
+       ((= n 1) (setq val 1))
+       ((= n 2) (setq val 1))
+       (t (setq val (+ (f1 (- n 1)) (f1 (- n 3))))))
+      (aset store n val))))
 
-(f 0)
+(f1 6)
+;4
+
+(f1 7)
+;6
+
+(f1 8)
+;9
+
+(setq counter 0)
 ;0
 
-(f 1)
-;1
+(f1 9)
+;13
 
-(f 2)
-;1
-
-(f 3)
-;1
-
-(f 4)
-;2
-
-(f 5)
-;3
+(print counter) ; Printing the count for (f 9) to ensure optimization worked
+;15
 
 
 ;; PART 3
