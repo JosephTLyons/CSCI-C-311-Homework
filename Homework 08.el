@@ -196,13 +196,17 @@
   (if (> (length T) 2)
     (car (cdr (cdr T))))) ; (caddr T)
 
+(defun my-print (&rest L)
+  "Prints any number of arguments with princ and returns true."
+  (mapc 'princ L) t)
+
 ;; PART 4AA
 (defun print-in-order (T)
   "Recursively prints the tree in-order.  Left - Root - Right"
   (if T
       (progn
         (print-in-order (left-subtree T))
-        (mapc 'princ (list (root T) " "))
+        (my-print (root T) " ")
         (print-in-order (right-subtree T)))))
 
 (setq S '(23 (51 (18) (33 (5))) (7 () (10))))
