@@ -217,8 +217,7 @@
 ;; PART 4AB
 (defun print-in-order1 (T)
   "Iteratively prints the tree in-order.  Left - Root - Right"
-  (let ((stackT nil) (frame nil) 
-        (state nil))
+  (let ((stackT nil) (frame nil) (state nil))
     (push (cons T 'left) stackT)
     (while stackT
       (setq frame (pop stackT))
