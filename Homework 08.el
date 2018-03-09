@@ -183,3 +183,30 @@
 
 ;; PART 4
 ;; General Transformation
+(defun root (T) "The root of the tree."
+  (if T (car T)))
+
+(defun left-subtree (T) 
+  "The left subtree, also a list."
+  (if (and T (cdr T))
+    (car (cdr T)))) ; (cadr T)
+
+(defun right-subtree (T) 
+  "The right subtree, also a list."
+  (if (> (length T) 2)
+    (car (cdr (cdr T))))) ; (caddr T)
+
+;; PART 4AA
+(defun print-in-order (T)
+  "Prints the tree in-order.  Left - Root - Right"
+  (if T
+      (progn
+        (print-in-order (left-subtree T))
+        (mapc 'princ (list (root T) " "))
+        (print-in-order (right-subtree T)))))
+
+(setq S '(23 (51 (18) (33 (5))) (7 () (10))))
+
+(print-in-order S)
+18 51 5 33 23 7 10 nil
+
