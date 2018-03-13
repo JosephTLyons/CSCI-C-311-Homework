@@ -125,7 +125,7 @@
              ((= n 0) 0)
              ((= n 1) 1)
              ((= n 2) 1)
-             (t (+ (f1 (- n 1)) 
+             (t (+ (f1 (- n 1))
                    (f1 (- n 3))))))
       (aset store n res))))
 
@@ -232,10 +232,10 @@
       (if T
           (cond ((eq state 'left)
                  (push (cons T 'right) stackT)
-                 (push (cons (left-subtree T) 
+                 (push (cons (left-subtree T)
                              'left) stackT))
                 ((eq state 'right)
-                 (push (cons (right-subtree T) 
+                 (push (cons (right-subtree T)
                              'left) stackT)
                  (my-print (root T) " ")))))))
 
