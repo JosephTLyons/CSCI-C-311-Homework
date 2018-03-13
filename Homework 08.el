@@ -115,6 +115,7 @@
 (setq store (make-vector 20 nil))
 
 (defun f1 (n)
+  "f(n) = f(n-1) + f(n-3), with f(0) = 0, f(1) = f(2) = 1."
   (setq counter (+ counter 1))
   (let ((res 0))
     (if (setq res (elt store n))
