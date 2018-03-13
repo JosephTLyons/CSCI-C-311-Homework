@@ -147,6 +147,7 @@
 (print counter) ; Printing the count for (f 9) to ensure optimization worked
 ;15
 
+
 ;; PART 3
 ;; Deep Recursion
 (defun search-driver (L val)
