@@ -116,15 +116,17 @@
 
 (defun f1 (n)
   (setq counter (+ counter 1))
-  (let ((temp 0) (val 0))
-    (if (setq temp (elt store n))
-        temp
-      (cond
-       ((= n 0) (setq val 0))
-       ((= n 1) (setq val 1))
-       ((= n 2) (setq val 1))
-       (t (setq val (+ (f1 (- n 1)) (f1 (- n 3))))))
-      (aset store n val))))
+  (let ((res 0))
+    (if (setq res (elt store n))
+        res
+      (setq res
+            (cond
+             ((= n 0) 0)
+             ((= n 1) 1)
+             ((= n 2) 1)
+             (t (+ (f1 (- n 1)) 
+                   (f1 (- n 3))))))
+      (aset store n res))))
 
 (f1 6)
 ;4
@@ -143,7 +145,6 @@
 
 (print counter) ; Printing the count for (f 9) to ensure optimization worked
 ;15
-
 
 ;; PART 3
 ;; Deep Recursion
