@@ -10,6 +10,9 @@
       (push (sqrt (* x -1)) result))
     result))
 
+(sqrtI 4)
+;2.0
+
 (sqrtI -4)
 ;(2.0 "imaginary")
 
