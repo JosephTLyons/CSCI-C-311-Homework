@@ -1,3 +1,6 @@
+;; Quadratic only works with real numbers, I haven't found a good way
+;; to implement solutions with imaginary numbers yet.
+
 (defun sqrt2 (x)
   "A modified sqrt function to deal with imaginary numbers."
   (let ((result '()))
