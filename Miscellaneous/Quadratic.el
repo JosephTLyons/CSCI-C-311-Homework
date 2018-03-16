@@ -18,3 +18,10 @@
     results))
 
 (quadratic 1 0 -9)
+;(-3.0 3.0)
+
+;; Making up a scenario to test:
+;(x + 3.2) * (2x - 1.9) = (2x^2 + 4.5x - 6.08)
+
+(quadratic 2 4.5 -6.08)
+;(-3.2 0.9500000000000002)
