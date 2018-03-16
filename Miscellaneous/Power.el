@@ -12,7 +12,7 @@
   (let ((result 1))
     (while (< exponent 0)
       (setq exponent (+ exponent 1))
-      (setq result (* result (/ 1 (* base 1.0)))))
+      (setq result (* result (/ 1 (float base)))))
     result))
 
 (defun power (base exponent)
