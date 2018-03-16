@@ -17,7 +17,7 @@
 ;(2.0 "imaginary")
 
 (defun quadratic (a b c)
-  "Calculates the zeroes of a quadratic function by inputing the coefficients."
+  "Calculates the zeroes of a quadratic function a(x^2)+bx+c"
   (let ((results '()))
     (push (/ (+ (* b -1) (sqrt (- (expt b 2) (* 4 a c)))) (* 2 a)) results)
     (push (/ (- (* b -1) (sqrt (- (expt b 2) (* 4 a c)))) (* 2 a)) results)
