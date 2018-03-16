@@ -10,6 +10,9 @@
       (push (sqrt (* x -1)) result))
     result))
 
+(sqrtI -4)
+;(2.0 "imaginary")
+
 (defun quadratic (a b c)
   "Calculates the zeroes of a quadratic function by inputing the coefficients."
   (let ((results '()))
