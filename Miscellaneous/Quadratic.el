@@ -1,9 +1,11 @@
 (defun sqrt2 (x)
   "A modified sqrt function to deal with imaginary numbers."
-  (if (> x 0)
-      (sqrt x)
-    (princ (sqrt (* x -1)))
-    (princ " imaginary")))
+  (let ((result '()))
+    (if (> x 0)
+        (sqrt x)
+      (push "imaginary" result))
+      (push (sqrt (* x -1)) result)
+    result))
 
 (defun quadratic (a b c)
   "Calculates the zeroes of a quadratic function by inputing the coefficients."
