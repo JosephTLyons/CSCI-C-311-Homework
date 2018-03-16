@@ -1,4 +1,4 @@
-# Lisp / Elisp
+# CSCI-C 311 Elisp
 
 - This repository contains all Elisp homework and lab files associated with IUSB's CSCI-C 311 (Programming Languages) course of Spring 2018.  
 
