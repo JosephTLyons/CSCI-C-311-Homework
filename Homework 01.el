@@ -1,7 +1,7 @@
 ;; Joseph Lyons
 ;; C311 - Spring 2018
 ;; Homework 1
-;; Expressions are followed by their evaluated forms in the next line
+;; Expressions are followed by their evaluated forms on the next line
 
 
 (* (log 15.0 2) (+ 3 (* 18 2))) ; Assumed log used base 2
