@@ -26,7 +26,7 @@
 
 ;; PART 2A
 ;; Type 3: Regular Grammar
-;; It produces strings in the form of[(bc)^n (a)^n]
+;; It produces strings in the form of [(bc)^n (a)^n]
 
 ;; PART 2B
 
