@@ -23,3 +23,41 @@
 
 ;; PART 2
 ;; Formal Grammar
+
+;; PART 2A
+;; Type 3: Regular Grammar
+;; It produces strings in the form of[(bc)^n (a)^n]
+
+;; PART 2B
+
+;; PART 2C
+(defun check-S (Lst)
+  (check-T Lst))
+
+(defun check-U (Lst)
+  (or (if (and (equal (car Lst) 'b) (equal (cadr  Lst) 'c))
+          (check-U (cdr (cdr Lst))))
+      (if (equal (car Lst) 'a)
+          (check-V (cdr Lst)))))
+
+(defun check-V (Lst)
+  (cond
+   ((equal (car Lst) 'a)
+    (check-V (cdr Lst)))
+   ((not Lst))))
+
+(check-U '(b c))
+;nil
+
+(check-U '(b c a))
+;t
+
+(check-U '(b c b c a))
+;t
+
+(check-U '(b c b c a b a a))
+;nil
+
+(check-U '(b c b c b c a a a a))
+;t
+
