@@ -29,6 +29,19 @@
 ;; It produces strings in the form of [(bc)^n (a)^n]
 
 ;; PART 2B
+;;    S
+;;   / \
+;;  bc  U
+;;     / \
+;;    bc  U
+;;       / \
+;;      bc  U
+;;         / \
+;;        a   V
+;;           / \
+;;          a   V
+;;               \
+;;                e
 
 ;; PART 2C
 (defun check-S (Lst)
