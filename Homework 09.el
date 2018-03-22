@@ -45,7 +45,9 @@
 
 ;; PART 2C
 (defun check-S (Lst)
-  (check-T Lst))
+  (if (not Lst)
+      nil
+    (check-U Lst)))
 
 (defun check-U (Lst)
   (cond
@@ -60,17 +62,20 @@
     (check-V (cdr Lst)))
    ((not Lst))))
 
-(check-U '(b c))
+(check-S '())
 ;nil
 
-(check-U '(b c a))
-;t
-
-(check-U '(b c b c a))
-;t
-
-(check-U '(b c b c a b a a))
+(check-S '(b c))
 ;nil
 
-(check-U '(b c b c b c a a a a))
+(check-S '(b c a))
+;t
+
+(check-S '(b c b c a))
+;t
+
+(check-S '(b c b c a b a a))
+;nil
+
+(check-S '(b c b c b c a a a a))
 ;t
