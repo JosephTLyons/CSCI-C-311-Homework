@@ -35,10 +35,11 @@
   (check-T Lst))
 
 (defun check-U (Lst)
-  (or (if (and (equal (car Lst) 'b) (equal (cadr  Lst) 'c))
-          (check-U (cdr (cdr Lst))))
-      (if (equal (car Lst) 'a)
-          (check-V (cdr Lst)))))
+  (cond
+  ((and (equal (car Lst) 'b) (equal (cadr  Lst) 'c))
+   (check-U (cdr (cdr Lst))))
+  ((equal (car Lst) 'a)
+   (check-V (cdr Lst)))))
 
 (defun check-V (Lst)
   (cond
