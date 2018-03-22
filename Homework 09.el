@@ -79,5 +79,8 @@
 (check-S '(b c b c a b a a))
 ;nil
 
+(check-S '(b c bc a a a b))
+;nil
+
 (check-S '(b c b c b c a a a a))
 ;t
