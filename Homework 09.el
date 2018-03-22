@@ -49,10 +49,10 @@
 
 (defun check-U (Lst)
   (cond
-  ((and (equal (car Lst) 'b) (equal (cadr  Lst) 'c))
-   (check-U (cdr (cdr Lst))))
-  ((equal (car Lst) 'a)
-   (check-V (cdr Lst)))))
+   ((and (equal (car Lst) 'b) (equal (cadr  Lst) 'c))
+    (check-U (cdr (cdr Lst))))
+   ((equal (car Lst) 'a)
+    (check-V (cdr Lst)))))
 
 (defun check-V (Lst)
   (cond
