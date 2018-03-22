@@ -43,7 +43,7 @@
 ;;          / \
 ;;         a   V
 ;;             |
-;;             e
+;;             e (empty string)
 
 ;; PART 2C
 (defun check-S (Lst)
