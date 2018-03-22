@@ -61,4 +61,3 @@
 
 (check-U '(b c b c b c a a a a))
 ;t
-
