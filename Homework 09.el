@@ -29,7 +29,9 @@
 ;; It produces strings in the form of [(bc)^n (a)^n]
 
 ;; PART 2B
-;;    S
+;;  S
+;;   \
+;;    U
 ;;   / \
 ;;  bc  U
 ;;     / \
