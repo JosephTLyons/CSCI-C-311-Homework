@@ -40,8 +40,8 @@
 ;;        a   V
 ;;           / \
 ;;          a   V
-;;               \
-;;                e
+;;              |
+;;              e
 
 ;; PART 2C
 (defun check-S (Lst)
