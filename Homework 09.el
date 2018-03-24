@@ -27,7 +27,7 @@
 ;; PART 2A
 ;; Type 3: Regular Grammar
 ;; It produces strings in the form of [(bc)^n (a)^m]
-;; Where n >= 0 and m > 0
+;; Where n and m are integers, n >= 0 and m > 0
 
 ;; PART 2B
 ;; S
