@@ -26,7 +26,8 @@
 
 ;; PART 2A
 ;; Type 3: Regular Grammar
-;; It produces strings in the form of [(bc)^n (a)^n]
+;; It produces strings in the form of [(bc)^n (a)^m]
+;; Where n >= 0 and m > 0
 
 ;; PART 2B
 ;; S
@@ -66,6 +67,12 @@
 
 (check-S '())
 ;nil
+
+(check-S '(a))
+;t
+
+(check-S '(a a))
+;t
 
 (check-S '(b c))
 ;nil
