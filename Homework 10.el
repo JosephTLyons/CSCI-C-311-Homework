@@ -11,11 +11,12 @@
 ;; FSM to Grammar
 
 ;; PART 2A
-;; A => yB
-;; B => wC
-;; C => zB
-;; C => yD
-;; D => end
+;; Start => A
+;;     A => yB
+;;     B => wC
+;;     C => zB
+;;     C => yD
+;;     D => end
 
 
 ;; PART 2B
