@@ -25,6 +25,48 @@
 
 
 ;; PART 2C
+(defun check-A (Lst)
+  (cond
+   ((not Lst)
+    nil)
+   ((equal (car Lst) 'y)
+    (check-B (cdr Lst)))))
+
+(defun check-B (Lst)
+  (if (equal (car Lst) 'w)
+      (check-C (cdr Lst))))
+
+(defun check-C (Lst)
+  (cond
+   ((equal (car Lst) 'z)
+    (check-B (cdr Lst)))
+   ((equal (car Lst) 'y)
+    (check-D (cdr Lst)))))
+
+(defun check-D (Lst)
+  (not Lst))
+
+(check-A '())
+;nil
+
+(check-A '(y))
+;nil
+
+(check-A '(y w))
+;nil
+
+(check-A '(y w y))
+;t
+
+(check-A '(y w z y))
+;nil
+
+(check-A '(y w z w y))
+;t
+
+(check-A '(y w z w z w z w y))
+;t
+
 
 ;; PART 3
 ;; LL(k) Grammars
