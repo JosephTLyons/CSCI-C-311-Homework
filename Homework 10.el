@@ -17,13 +17,11 @@
 ;; C => yD
 ;; D => end
 
-
 ;; PART 2B
 ;; This grammar produces strings in the form of [y w (z w)^n y]
 ;; Where n is an integer and n >= 0
 ;; This grammar is a DFA.  No one terminal node has branches with multiple repeates of the same non-
 ;; terminal.
-
 
 ;; PART 2C
 (defun check-A (Lst)
