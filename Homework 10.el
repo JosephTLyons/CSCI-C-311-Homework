@@ -19,6 +19,10 @@
 
 
 ;; PART 2B
+;; This grammar produces strings in the form of [y w (z w)^n y]
+;; Where n is an integer and n >= 0
+;; This grammar is a DFA, as there is only one outgoing branch for each symbol.
+
 
 ;; PART 2C
 
