@@ -10,7 +10,7 @@
 ;; PART 2
 ;; FSM to Grammar
 
-;; A => vB
+;; A => yB
 ;; B => wC
 ;; C => zB
 ;; C => yD
