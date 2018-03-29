@@ -67,6 +67,12 @@
 (check-A '(y w z w z w z w y))
 ;t
 
+(check-A '(y w z w y)) ; Examples from the homework webpage
+;t
+
+(check-A '(y z w w))
+;nil
+
 
 ;; PART 3
 ;; LL(k) Grammars
