@@ -29,13 +29,13 @@
 ;; The image of the finite state machine is figure 10.1
 
 ;; Table:
-;; |   | / | * | ! | end |
-;; | A | B |err|err| err |
-;; | B |err| C |err| err |
-;; | C |err| E | D | err |
-;; | D | F | E | C | err |
-;; | E | F | D | C | err |
-;; | F |err|err|err| end |
+;; |   |  /  |  *  |  !  | end |
+;; | A |  B  | err | err | err |
+;; | B | err |  C  | err | err |
+;; | C | err |  E  |  D  | err |
+;; | D |  F  |  E  |  C  | err |
+;; | E |  F  |  D  |  C  | err |
+;; | F | err | err | err | end |
 
 
 ;; PART 2
