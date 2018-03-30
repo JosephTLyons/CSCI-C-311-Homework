@@ -107,5 +107,16 @@
 ;; LL(k) Grammars
 
 ;; PART 3A
+;; A => aBaa
+;; A => bBba
+;; B => b
+;; B => epsilon
+
+;; A => aBaa => abaa
+;; A => bBba => bbba
+
+;; This seems to be an LL(k) grammar, with k being 1.  We must look ahead up to at most 1 character
+;; to find the next non-terminal symbol, such as for the first and second rule with non-terminal
+;; 'a'.
 
 ;; PART 3B
