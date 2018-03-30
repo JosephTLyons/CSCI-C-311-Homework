@@ -11,20 +11,18 @@
 
 ;; A => /B
 ;; B => *C
-;; C => !D
-;; C => *E
-;; D => !C
-;; D => *E
+;; C => *D
+;; C => !E
+;; D => *D
+;; D => !E
 ;; D => /F
 ;; E => !C
 ;; E => *D
-;; E => /F
-;; E => /F
 ;; F => end
 
 ;; Testing the grammar:
-;; A => /B => /*C => /**E => /**aC => /**abD => /**ab*E => /**ab*cC => /**ab*c*E => /**ab*c**D
-;; => /**ab*c**/F => /**ab*c**/
+;; A => /B => /*C => /**D => /**aE => /**abC => /**ab*D => /**ab*cE => /**ab*c*D => /**ab*c**D =>
+;; /**ab*c**/F => /**ab*c**/
 
 ;; The image of the finite state machine is figure 10.1
 
@@ -32,9 +30,9 @@
 ;; |   |  /  |  *  |  !  | end |
 ;; | A |  B  | err | err | err |
 ;; | B | err |  C  | err | err |
-;; | C | err |  E  |  D  | err |
-;; | D |  F  |  E  |  C  | err |
-;; | E |  F  |  D  |  C  | err |
+;; | C | err |  D  |  E  | err |
+;; | D |  F  |  D  |  E  | err |
+;; | E | err |  D  |  C  | err |
 ;; | F | err | err | err | end |
 
 
