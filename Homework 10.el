@@ -117,6 +117,6 @@
 
 ;; This seems to be an LL(k) grammar, with k being 1.  We must look ahead up to at most 1 character
 ;; to find the next non-terminal symbol, such as for the first and second rule with non-terminal
-;; 'a'.
+;; 'B'.
 
 ;; PART 3B
