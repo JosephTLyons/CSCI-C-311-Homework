@@ -132,7 +132,7 @@
 ;; ClassAttr => Name; => idQual; => id.idQual => id.id.idQual => id.id.id;
 ;; ClassAttr => Name; => idQual; => id;
 
-;; This does not seems to be a non-LL(k) grammar.  If we check out the string id.id,id, which I
-;; assume id represents object  and fucntion names, then we know that we must parse through that
-;; name itself before knowing what rule to apply.  Because a variables name can be arbitrarily
-;; large, we can't define this grammar with a particular constant k.  Therefore, it is non-LL(k).
+;; This seems to be a non-LL(k) grammar.  If we analyze the string id.id,id, which I assume id
+;; represents object or fucntion names, then we know that we must parse through that name itself
+;; before knowing what rule to apply next.  Because a variables name can be arbitrarily large, we
+;; can't define this grammar with a particular constant k.  Therefore, it is non-LL(k).
