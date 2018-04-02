@@ -115,8 +115,8 @@
 ;; A => aBaa => abaa
 ;; A => bBba => bbba
 
-;; This seems to be an LL(k) grammar, with k being 1.  We must look ahead up to at most 1 character
-;; to find the next non-terminal symbol, such as for the first and second rule with non-terminal
-;; 'B'.
+;; This seems to be an LL(k) grammar, with k being 1.  We must look ahead up to at most 1 character,
+;; in the input string, to find the next non-terminal symbol, such as for the first and second rule
+;; with non-terminal 'B'.
 
 ;; PART 3B
