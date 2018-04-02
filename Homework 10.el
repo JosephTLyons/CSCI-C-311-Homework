@@ -8,7 +8,7 @@
 ;; Writing a Grammar
 ;; This may be a little complex (maybe more so than it needs to be), but I wanted to try to write it
 ;; to be a DFA.
-;; The rule containing the '!' symbol refers to all characters excluding the '*' symbol.
+;; The rule containing the '!' symbol refers to all characters excluding the '*' and '/' symbols.
 
 ;; A => /B
 ;; B => *C
