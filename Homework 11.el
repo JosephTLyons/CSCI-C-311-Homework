@@ -147,7 +147,10 @@
   (and (check-E)
        (not input)))
 
-(check-input '(2 "+" a "*" "(" 4 "-" b ")"))
+(check-input '(1 "+" 2)) ; A simple example
+;t
+
+(check-input '(2 "+" a "*" "(" 4 "-" b ")")) ; Example from homework page
 ;t
 
 (check-input '(2 "." a "*" "(" 4 "-" b ")"))
@@ -158,3 +161,5 @@
 
 (check-input '(2 "+" a "*" "&" 4 "-" b ")"))
 ;nil
+
+(check-input '("*" 2 "+" a "*" "(" 4 "-" b ")" "/"))
