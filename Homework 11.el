@@ -67,7 +67,10 @@
 
 ;; MO => * | /
 (defun check-MO ()
-; For the student to implement
+  (if (or (equal (car input) "*")
+          (equal (car input) "/"))
+      (move-input) ; returns t
+    nil))
 
 (defun check-input (L)
   (setq input L)
