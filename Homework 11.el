@@ -11,6 +11,42 @@
 ;; PART 2A
 ;; Parsing Tree
 
+;; Draw the parsing trees for the expression
+;; a * b - (3 + a)
+;; expr => term term_tail
+;; term_tail => add_op term term_tail | e
+;; term => factor factor_tail
+;; factor_tail => mult_op factor factor_tail | e
+;; factor => ( expr ) | id | number
+;; add_op => + | -
+;; mult_op => * | /
+
+;; The "^" symbol is used to highlight the item from the input operation string.
+;; The "e" symbol is used to represent epsilon.
+;;       ___exp___
+;;      /         \
+;;     T__        TT --- TT
+;;    /   \        | \    |
+;;   F    FT      AO  \   e
+;;  /     / \      |   \
+;; id   MO   F     -    T
+;;  a    *   |     ^   / \
+;;  ^    ^   id       F   \
+;;            b       |    FT
+;;            ^    ( exp )  |
+;;                 ^  |  ^  e
+;;                 ___|____
+;;                /        \
+;;               T         TT --- TT
+;;              / \        | \     |
+;;             F  FT      AO  \    e
+;;            /    |       |   \
+;;          num    e       +    T
+;;           3             ^   / \
+;;           ^                F  FT
+;;                            |   |
+;;                            id  e
+;;                             a
 
 ;; PART 2B
 ;; LL Parsing
