@@ -82,14 +82,14 @@
   (and (check-E)
        (not input)))
 
-(check-input '(2 "+" a "*" "(" 4 "-" b ")" ))
+(check-input '(2 "+" a "*" "(" 4 "-" b ")"))
 ;t
 
-(check-input '(2 "." a "*" "(" 4 "-" b ")" ))
+(check-input '(2 "." a "*" "(" 4 "-" b ")"))
 ;nil
 
-(check-input '(2 "+" a "*" "(" 4 "-" a ")" ))
+(check-input '(2 "+" a "*" "(" 4 "-" a ")"))
 ;t
 
-(check-input '(2 "+" a "*" "&" 4 "-" b ")" ))
+(check-input '(2 "+" a "*" "&" 4 "-" b ")"))
 ;nil
