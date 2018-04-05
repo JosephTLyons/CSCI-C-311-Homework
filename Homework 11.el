@@ -52,6 +52,34 @@
 ;; PART 2B
 ;; LL Parsing
 
+;; The "^" symbol is used to highlight the current path that we are taking.
+;; a * b - (3 + a)
+;; E -> T TT -> F FT TT -> (F a) FT TT -> (F a) MO F FT TT -> (F a) (MO *) F FT TT ->
+;;      ^       ^                ^              ^                          ^
+;; (F a) (MO *) (F b) FT TT -> (F a) (MO *) (F b) TT -> (F a) (MO *) (F b) AO T TT ->
+;;                    ^                           ^                        ^
+;; (F a) (MO *) (F b) (AO -) T TT -> (F a) (MO *) (F b) (AO -) F FT TT ->
+;;                           ^                                 ^
+;; (F a) (MO *) (F b) (AO -) (Exp) FT TT -> (F a) (MO *) (F b) (AO -) (T TT) FT TT ->
+;;                             ^                                       ^
+;; (F a) (MO *) (F b) (AO -) (F FT TT) FT TT -> (F a) (MO *) (F b) (AO -) ((F 3) FT TT) FT TT
+;;                            ^                                                  ^
+;; (F a) (MO *) (F b) (AO -) ((F 3) TT) FT TT -> (F a) (MO *) (F b) (AO -) ((F 3) AO T TT) FT TT ->
+;;                                  ^                                             ^
+;; (F a) (MO *) (F b) (AO -) ((F 3) (AO +) T TT) FT TT ->
+;;                                         ^
+;; (F a) (MO *) (F b) (AO -) ((F 3) (AO +) F FT TT) FT TT ->
+;;                                         ^
+;; (F a) (MO *) (F b) (AO -) ((F 3) (AO +) (F a) FT TT) FT TT ->
+;;                                               ^
+;; (F a) (MO *) (F b) (AO -) ((F 3) (AO +) (F a) TT) FT TT ->
+;;                                               ^
+;; (F a) (MO *) (F b) (AO -) ((F 3) (AO +) (F a)) FT TT ->
+;;                                                ^
+;; (F a) (MO *) (F b) (AO -) ((F 3) (AO +) (F a)) TT ->
+;;                                                ^
+;; (F a) (MO *) (F b) (AO -) ((F 3) (AO +) (F a))
+
 
 ;; PART 3
 ;; Recursive Descent
