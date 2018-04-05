@@ -83,4 +83,7 @@
        (not input)))
 
 (check-input '(2 "+" a "*" "(" 4 "-" b ")" ))
-; should return t
+;t
+
+(check-input '(2 "." a "*" "(" 4 "-" b ")" ))
+;nil
