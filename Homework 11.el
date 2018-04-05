@@ -33,11 +33,11 @@
 ;; TT => AO T TT | e
 (defun check-TT ()
   (cond ((or (equal (car input) "+")
-	     (equal (car input) "-"))
-	 (and (check-AO)
-	      (check-T)
-	      (check-TT)))
-	(t t)))
+             (equal (car input) "-"))
+         (and (check-AO)
+              (check-T)
+              (check-TT)))
+        (t t)))
 
 ;; T => F FT
 (defun check-T()
@@ -50,18 +50,18 @@
 ;; F => ( E ) | id | number
 (defun check-F ()
   (cond ((symbolp (car input)) (move-input))
-	((numberp (car input)) (move-input))
-	((equal (car input) "(")
-	 (move-input)
-	 (and (check-E)
-	      (equal (car input) ")")
-	      (move-input)))
-	(t nil)))
+        ((numberp (car input)) (move-input))
+        ((equal (car input) "(")
+         (move-input)
+         (and (check-E)
+              (equal (car input) ")")
+              (move-input)))
+        (t nil)))
 
 ;; AO => + | -
 (defun check-AO ()
   (if (or (equal (car input) "+")
-	  (equal (car input) "-"))
+          (equal (car input) "-"))
       (move-input) ; returns t
     nil))
 
