@@ -45,7 +45,12 @@
 
 ;; FT => MO F FT | e
 (defun check-FT ()
-; For the student to implement
+  (cond ((or (equal (car input) "*")
+             (equal (car input) "/"))
+         (and (check-MO)
+              (check-F)
+              (check-FT)))
+        (t t)))
 
 ;; F => ( E ) | id | number
 (defun check-F ()
