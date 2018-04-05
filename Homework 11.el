@@ -87,3 +87,9 @@
 
 (check-input '(2 "." a "*" "(" 4 "-" b ")" ))
 ;nil
+
+(check-input '(2 "+" a "*" "(" 4 "-" a ")" ))
+;t
+
+(check-input '(2 "+" a "*" "&" 4 "-" b ")" ))
+;nil
