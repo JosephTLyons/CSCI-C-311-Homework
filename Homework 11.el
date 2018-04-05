@@ -41,7 +41,7 @@
 
 ;; T => F FT
 (defun check-T()
-; For the student to implement
+  (and (check-F) (check-FT)));; go to F and FT
 
 ;; FT => MO F FT | e
 (defun check-FT ()
