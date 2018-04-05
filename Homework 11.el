@@ -23,31 +23,31 @@
 
 ;; The "^" symbol is used to highlight the item from the input operation string.
 ;; The "e" symbol is used to represent epsilon.
-;;       ___exp___
-;;      /         \
-;;     T__        TT --- TT
-;;    /   \        | \    |
-;;   F    FT      AO  \   e
-;;  /     / \      |   \
-;; id   MO   F     -    T
-;;  a    *   |     ^   / \
-;;  ^    ^   id       F   \
-;;            b       |    FT
-;;            ^    ( exp )  |
-;;                 ^  |  ^  e
-;;                 ___|____
-;;                /        \
-;;               T         TT --- TT
-;;              / \        | \     |
-;;             F  FT      AO  \    e
-;;            /    |       |   \
-;;          num    e       +    T
-;;           3             ^   / \
-;;           ^                F  FT
-;;                            |   |
-;;                            id  e
-;;                             a
-;;                             ^
+;;         ___exp___
+;;        /         \
+;;       T__         TT --- TT
+;;      /   \         | \    |
+;;     F    FT-FT    AO  \   e
+;;    /     / \  \    |   \
+;;   id   MO   F  e   -    T
+;;    a    *   |      ^   / \
+;;    ^    ^   id        F   \
+;;              b        |    FT
+;;              ^     ( exp )  |
+;;                    ^  |  ^  e
+;;                    ___|____
+;;                   /        \
+;;                  T         TT --- TT
+;;                 / \        | \     |
+;;                F  FT      AO  \    e
+;;               /    |       |   \
+;;             num    e       +    T
+;;              3             ^   / \
+;;              ^                F  FT
+;;                               |   |
+;;                               id  e
+;;                                a
+;;                                ^
 
 ;; PART 2B
 ;; LL Parsing
