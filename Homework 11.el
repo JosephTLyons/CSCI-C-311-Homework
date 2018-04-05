@@ -47,6 +47,7 @@
 ;;                            |   |
 ;;                            id  e
 ;;                             a
+;;                             ^
 
 ;; PART 2B
 ;; LL Parsing
