@@ -7,6 +7,65 @@
 ;; PART 1
 ;; Context-Free Grammar
 
+;; Key:
+;; I = if
+;; EI = else if
+;; E = else
+;; OB = Opening Brace
+;; CB = Closing Brace
+;; SLC = Single Line of Code
+;; MLC = Multipe Lines of Code
+;; e = epsilon
+
+;; Grammar:
+;; Start => if (Expr) A
+;; B => OB MLC CB END
+;; A => OB MLC CB EI
+;; A => OB MLC CB E END
+;; A => SLC END
+;; A => SLC EI
+;; A => OB SLC E END
+;; OB => {
+;; CB => }
+;; EI => else if (Expr) A
+;; E => else A
+;; END => e
+
+;; Examples 1:
+;; if (Expr)
+;; {
+;;     // Code
+;;     // Code
+;; }
+
+;; Start => if (Expr) A => if (Expr) QB MLC CB END => if (Expr) { MLC CB END =>
+;;                    ^              ^                                ^
+;; if (Expr) { MLC } END => if (Expr) { MLC }
+;;                    ^
+
+;; Example 2:
+;; if (Expr)
+;;     // Code
+;; else if (Expr)
+;; {
+;;     // Code
+;;     // Code
+;; }
+;; else
+;;     // Code
+
+;; Start => if (Expr) A => if (Expr) SLC EI => if (Expr) SLC else if (Expr) A =>
+;;                    ^                  ^                                  ^
+;; if (Expr) SLC else if (Expr) OB MLC CB E END => if (Expr) SLC else if (Expr) { MLC CB E END =>
+;;                              ^                                                     ^
+;; if (Expr) SLC else if (Expr) { MLC } E END => if (Expr) SLC else if (Expr) { MLC } else A END =>
+;;                                      ^                                                  ^
+;; if (Expr) SLC else if (Expr) { MLC } else SLC END END =>
+;;                                               ^
+;; if (Expr) SLC else if (Expr) { MLC } else SLC END
+;;                                               ^
+;; if (Expr) SLC else if (Expr) { MLC } else SLC
+
 
 ;; PART 2A
 ;; Parsing Tree
