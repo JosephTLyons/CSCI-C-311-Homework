@@ -66,6 +66,15 @@
 ;;                                               ^
 ;; if (Expr) SLC else if (Expr) { MLC } else SLC
 
+;; This is an non-LL(k) grammar.  When lookin at a conditional statement, the parser needs to look
+;; ahead varying amounts of lines of code to know where the end of the conditoinal is.  In example
+;; one, The conditional ends fairly quickly, having only one if statement.  In example two, there
+;; is an if statement, an else if, and and else.  We have to sift though all the code in the body's
+;; of these and check to see whether the next is another else if or an else before we know when to
+;; end, Which corresponsds with the many rules associated with non-terminal A.  This code amount
+;; changes based on the user and is not constant, therefore, there is no constant k and it is non-
+;; LL(k).
+
 
 ;; PART 2A
 ;; Parsing Tree
