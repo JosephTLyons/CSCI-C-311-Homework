@@ -221,13 +221,8 @@
 (check-input '(2 "+" a "*" "(" 4 "-" b ")")) ; Example from homework page
 ;t
 
-(check-input '(2 "." a "*" "(" 4 "-" b ")"))
+(check-input '(2 "." a "*" "(" 4 "-" b ")")) ; Added error on purpose
 ;nil
 
-(check-input '(2 "+" a "*" "(" 4 "-" a ")"))
-;t
-
-(check-input '(2 "+" a "*" "&" 4 "-" b ")"))
+(check-input '("*" 2 "+" a "*" "(" 4 "-" b ")")) ; Added another error on purpose
 ;nil
-
-(check-input '("*" 2 "+" a "*" "(" 4 "-" b ")" "/"))
