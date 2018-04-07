@@ -198,15 +198,17 @@
 
 ;; AO => + | -
 (defun check-AO ()
-  (if (or (equal (car input) "+")
-          (equal (car input) "-"))
+  (if (and (or (equal (car input) "+")
+               (equal (car input) "-"))
+           (cdr input))
       (move-input) ; returns t
     nil))
 
 ;; MO => * | /
 (defun check-MO ()
-  (if (or (equal (car input) "*")
-          (equal (car input) "/"))
+  (if (and (or (equal (car input) "*")
+               (equal (car input) "/"))
+           (cdr input))
       (move-input) ; returns t
     nil))
 
@@ -225,4 +227,10 @@
 ;nil
 
 (check-input '("*" 2 "+" a "*" "(" 4 "-" b ")")) ; Added another error on purpose
+;nil
+
+;; I added an extra condition for the AO and MO functions that checked to make sure there wasn't an
+;; operator at the end of an expression and if so, return nil.
+
+(check-input '(2 "*"))
 ;nil
