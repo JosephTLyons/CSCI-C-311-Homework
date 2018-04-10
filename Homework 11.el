@@ -91,6 +91,7 @@
 
 ;; The "^" symbol is used to highlight the item from the input operation string.
 ;; The "e" symbol is used to represent epsilon.
+
 ;;       ___exp___
 ;;      /         \
 ;;     T__         TT --- TT
