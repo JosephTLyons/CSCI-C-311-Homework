@@ -15,7 +15,7 @@
 ;; C = Closing Brace
 ;; SLC = Single Line of Code
 ;; MLC = Multipe Lines of Code
-;; e = epsilon
+;; END = epsilon
 
 ;; Grammar:
 ;; Start => if (Expr) A
