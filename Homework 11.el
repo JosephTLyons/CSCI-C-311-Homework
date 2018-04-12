@@ -19,7 +19,7 @@
 
 ;; Grammar:
 ;; Start => if (Expr) A
-;; B => OB MLC CB END
+;; A => OB MLC CB END
 ;; A => OB MLC CB EI
 ;; A => OB MLC CB E END
 ;; A => SLC END
