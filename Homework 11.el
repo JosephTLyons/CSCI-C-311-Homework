@@ -11,22 +11,22 @@
 ;; I = if
 ;; EI = else if
 ;; E = else
-;; OB = Opening Brace
-;; CB = Closing Brace
+;; O = Opening Brace
+;; C = Closing Brace
 ;; SLC = Single Line of Code
 ;; MLC = Multipe Lines of Code
 ;; e = epsilon
 
 ;; Grammar:
 ;; Start => if (Expr) A
-;; A => OB MLC CB END
-;; A => OB MLC CB EI
-;; A => OB MLC CB E END
+;; A => O MLC C END
+;; A => O MLC C EI
+;; A => O MLC C E END
 ;; A => SLC END
 ;; A => SLC EI
-;; A => OB SLC E END
-;; OB => {
-;; CB => }
+;; A => O SLC E END
+;; O => {
+;; C => }
 ;; EI => else if (Expr) A
 ;; E => else A
 ;; END => e
@@ -38,10 +38,10 @@
 ;;     // Code
 ;; }
 
-;; Start => if (Expr) A => if (Expr) QB MLC CB END => if (Expr) { MLC CB END =>
-;;                    ^              ^                                ^
+;; Start => if (Expr) A => if (Expr) O MLC C END => if (Expr) { MLC C END =>
+;;                    ^              ^                              ^
 ;; if (Expr) { MLC } END => if (Expr) { MLC }
-;;                    ^
+;;                   ^
 
 ;; Example 2:
 ;; if (Expr)
@@ -56,8 +56,8 @@
 
 ;; Start => if (Expr) A => if (Expr) SLC EI => if (Expr) SLC else if (Expr) A =>
 ;;                    ^                  ^                                  ^
-;; if (Expr) SLC else if (Expr) OB MLC CB E END => if (Expr) SLC else if (Expr) { MLC CB E END =>
-;;                              ^                                                     ^
+;; if (Expr) SLC else if (Expr) O MLC C E END => if (Expr) SLC else if (Expr) { MLC C E END =>
+;;                              ^                                                   ^
 ;; if (Expr) SLC else if (Expr) { MLC } E END => if (Expr) SLC else if (Expr) { MLC } else A END =>
 ;;                                      ^                                                  ^
 ;; if (Expr) SLC else if (Expr) { MLC } else SLC END END =>
