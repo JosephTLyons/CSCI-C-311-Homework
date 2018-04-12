@@ -54,8 +54,10 @@
 ;;                                                        ^
 ;; if (Expr) Instruction else { Instruction Instruction }
 
-;; We must check up to 4 tokens ahead to differentiate between which one to use.  Therefore, this is
-;; an ll(4) grammar.
+;; As long as the Instruction non-terminal is defined to be ll(2) or less, then this grammar is also
+;; an LL(2) grammar.  Each rule only requires looking ahead up to 2 terminals/non-terminals in order
+;; to figure out which rule to apply.  For example, in the following rules:
+;; I1 = Instruction E END
 
 
 ;; PART 2A
