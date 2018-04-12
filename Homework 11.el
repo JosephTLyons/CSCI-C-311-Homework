@@ -66,14 +66,15 @@
 ;;                                               ^
 ;; if (Expr) SLC else if (Expr) { MLC } else SLC
 
-;; This is a non-LL(k) grammar.  When looking at a conditional statement, the parser needs to look
-;; ahead varying amounts of lines of code to know where the end of the conditoinal is.  In example
-;; one, The conditional ends fairly quickly, having only one if-statement.  In example two, there
-;; is an if-statement, an else-if, and an else.  We have to sift though all the code in the body's
-;; of these and check to see whether the next is another else if or an else before we know when to
-;; end, Which corresponsds with the many rules associated with non-terminal A.  This code amount
-;; changes based on the user and is not constant, therefore, there is no constant k and it is non-
-;; LL(k).
+;; This is an LL(4) grammar.  The furthest the parser must look ahead is 4 tokens, in the first
+;; three rules governing A.  For example, if we are checking a conditional block of code to check
+;; whether it is valid or not and come to rule A, we must check multiple different cases.  In the
+;; most extreme, we have:
+;; A => O MLC C END
+;; A => O MLC C EI
+;; A => O MLC C E END
+;; We must check up to 4 tokens ahead to differentiate between which one to use.  Therefore, this is
+;; an ll(4) grammar.
 
 
 ;; PART 2A
