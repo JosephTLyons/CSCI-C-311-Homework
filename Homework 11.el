@@ -34,8 +34,8 @@
 ;; Examples 1:
 ;; if (Expr)
 ;; {
-;;     // Code
-;;     // Code
+;;     // Single Line of Code
+;;     // Single Line of Code
 ;; }
 
 ;; Start => if (Expr) A => if (Expr) O MLC C END => if (Expr) { MLC C END =>
@@ -45,14 +45,14 @@
 
 ;; Example 2:
 ;; if (Expr)
-;;     // Code
+;;     // Single Line of Code
 ;; else if (Expr)
 ;; {
-;;     // Code
-;;     // Code
+;;     // Single Line of Code
+;;     // Single Line of Code
 ;; }
 ;; else
-;;     // Code
+;;     // Single Line of Code
 
 ;; Start => if (Expr) A => if (Expr) SLC EI => if (Expr) SLC else if (Expr) A =>
 ;;                    ^                  ^                                  ^
