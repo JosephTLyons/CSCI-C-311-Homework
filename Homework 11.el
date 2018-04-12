@@ -31,7 +31,7 @@
 ;; E => else A
 ;; END => e
 
-;; Examples 1:
+;; Example 1:
 ;; if (Expr)
 ;; {
 ;;     // Single Line of Code
