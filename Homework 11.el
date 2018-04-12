@@ -54,9 +54,6 @@
 ;;                                                        ^
 ;; if (Expr) Instruction else { Instruction Instruction }
 
-;; A => O MLC C END
-;; A => O MLC C EI
-;; A => O MLC C E END
 ;; We must check up to 4 tokens ahead to differentiate between which one to use.  Therefore, this is
 ;; an ll(4) grammar.
 
