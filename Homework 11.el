@@ -7,69 +7,53 @@
 ;; PART 1
 ;; Context-Free Grammar
 
-;; Key:
-;; I = if
-;; EI = else if
-;; E = else
-;; O = Opening Brace
-;; C = Closing Brace
-;; SLC = Single Line of Code
-;; MLC = Multipe Lines of Code
-;; END = epsilon
+;; Note: an "instruction" here is considered a non-terminal that is defined elsewhere.
+;; It is a full, syntatically correct line of code
 
 ;; Grammar:
 ;; Start => if (Expr) A
-;; A => O MLC C END
-;; A => O MLC C EI
-;; A => O MLC C E END
-;; A => SLC END
-;; A => SLC EI
-;; A => O SLC E END
-;; O => {
-;; C => }
-;; EI => else if (Expr) A
+;; A => I1
+;; A => { I2
+;; I1 = Instruction END
+;; I1 = Instruction E END
+;; I2 = Instruction I2
+;; I2 = Instruction } END
+;; I2 = Instruction } E END
 ;; E => else A
 ;; END => e
 
 ;; Example 1:
 ;; if (Expr)
 ;; {
-;;     // Single Line of Code
-;;     // Single Line of Code
+;;     // Instruction
+;;     // Instruction
 ;; }
 
-;; Start => if (Expr) A => if (Expr) O MLC C END => if (Expr) { MLC C END =>
-;;                    ^              ^                              ^
-;; if (Expr) { MLC } END => if (Expr) { MLC }
-;;                   ^
+;; Start => if (Expr) A => if (Expr) { I2 => if (Expr) { Instruction Instruction } END =>
+;;                    ^                ^                             ^             ^
+;; if (Expr) { Instruction Instruction }
 
 ;; Example 2:
 ;; if (Expr)
-;;     // Single Line of Code
-;; else if (Expr)
-;; {
-;;     // Single Line of Code
-;;     // Single Line of Code
-;; }
+;;     // Instruction
 ;; else
-;;     // Single Line of Code
+;; {
+;;     // Instruction
+;;     // Instruction
+;; }
 
-;; Start => if (Expr) A => if (Expr) SLC EI => if (Expr) SLC else if (Expr) A =>
-;;                    ^                  ^                                  ^
-;; if (Expr) SLC else if (Expr) O MLC C E END => if (Expr) SLC else if (Expr) { MLC C E END =>
-;;                              ^                                                   ^
-;; if (Expr) SLC else if (Expr) { MLC } E END => if (Expr) SLC else if (Expr) { MLC } else A END =>
-;;                                      ^                                                  ^
-;; if (Expr) SLC else if (Expr) { MLC } else SLC END END =>
-;;                                               ^
-;; if (Expr) SLC else if (Expr) { MLC } else SLC END
-;;                                               ^
-;; if (Expr) SLC else if (Expr) { MLC } else SLC
+;; Start => if (Expr) A => if (Expr) I1 => if (Expr) Instruction E END =>
+;;                    ^              ^                           ^
+;; if (Expr) Instruction else A END => if (Expr) Instruction else { I2 END =>
+;;                            ^                                     ^
+;; if (Expr) Instruction else { I2 END => if (Expr) Instruction else { Instruction I2 END =>
+;;                              ^                                                  ^
+;; if (Expr) Instruction else { Instruction Instruction } END END
+;;                                                        ^
+;; if (Expr) Instruction else { Instruction Instruction } END
+;;                                                        ^
+;; if (Expr) Instruction else { Instruction Instruction }
 
-;; This is an LL(4) grammar.  The furthest the parser must look ahead is 4 tokens, in the first
-;; three rules governing A.  For example, if we are checking a conditional block of code to check
-;; whether it is valid or not and come to rule A, we must check multiple different cases.  In the
-;; most extreme, we have:
 ;; A => O MLC C END
 ;; A => O MLC C EI
 ;; A => O MLC C E END
