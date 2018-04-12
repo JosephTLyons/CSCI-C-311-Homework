@@ -58,6 +58,10 @@
 ;; an LL(2) grammar.  Each rule only requires looking ahead up to 2 terminals/non-terminals in order
 ;; to figure out which rule to apply.  For example, in the following rules:
 ;; I1 = Instruction E END
+;; I2 = Instruction I2
+;; We must look past Instruction (1) and at the next non-terminal (2) to know which rule to apply.
+;; If the rule for indentifying that an Instruction is syntatically correct is greater than ll(2) or
+;; is non-ll(k), then my grammar will be the same ll(k) (or non-ll(k)) as Insruction.
 
 
 ;; PART 2A
