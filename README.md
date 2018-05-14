@@ -2,7 +2,7 @@
 
 - This repository contains all of the homework and lab files associated with IUSB's CSCI-C 311 (Programming Languages) course of Spring 2018.  This repo mostly consists of Elisp files, but there are a few other items in here as well.  
 
-- Some homework problems required images.  They are stored in the [Images](https://github.com/JosephTLyons/CSCI-C-311-Elisp/tree/master/Images) folder with a figure number that is in the format of homework#.problem#.  Any homework that used an image also makes reference to this image within the file.
+- Some homework problems required images.  They are stored in the [Images](https://github.com/JosephTLyons/CSCI-C-311-Elisp/tree/master/Images) folder with a figure number that is in the format of `Figure homework#.problem#`.  Any homework that used an image also makes reference to this image within the file.
 
 - Some homework problems required me to write initial versions in C++, which conveniently reside in the [C++ Solutions](https://github.com/JosephTLyons/CSCI-C-311-Elisp/tree/master/C%2B%2B%20Solutions) folder.
 
