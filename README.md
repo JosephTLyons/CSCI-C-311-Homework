@@ -6,7 +6,7 @@
 
 - Some homework problems required me to write initial versions in C++, which conveniently reside in the [C++ Solutions](https://github.com/JosephTLyons/CSCI-C-311-Elisp/tree/master/C%2B%2B%20Solutions) folder.
 
-- The [Remove.sh](https://github.com/JosephTLyons/Lisp-Elisp/blob/master/Remove.sh) script simply removes backup and temporary files created by Emacs.
+- The [Remove.sh](./Remove.sh) script simply removes backup and temporary files created by Emacs.
 
 - For almost all of the problems, my solutions are correct.  However, there may still be a few errors present.  After I submitted an assignment, I usually did not change any of the code to correct it, unless it was a trivial action, such as formatting.
 
