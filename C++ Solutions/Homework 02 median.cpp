@@ -6,16 +6,16 @@ int median (int a, int b, int c)
 {
     if (a <= b && b <= c)
         return b;
-    
+
     else if (c <= b && b <= a)
         return b;
-    
+
     else if (b <= a && a <= c)
         return a;
-    
+
     else if (c <= a && a <= b)
         return a;
-    
+
     return c;
 }
 
@@ -28,6 +28,6 @@ int main()
     std::cout << median (2, 0, 1) << std::endl;
     std::cout << median (2, 1, 0) << std::endl;
     std::cout << median (2, 1, 2) << std::endl << std::endl;
-    
+
     return 0;
 }

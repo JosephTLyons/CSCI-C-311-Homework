@@ -13,14 +13,14 @@ int GCD (const int &n, const int &m)
     int remainder = 1;
     int dividend = n;
     int divisor = m;
-    
+
     while (remainder != 0)
     {
         remainder = dividend % divisor;
         dividend = divisor;
         divisor = remainder;
     }
-    
+
     return dividend;
 }
 

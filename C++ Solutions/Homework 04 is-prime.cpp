@@ -13,23 +13,23 @@ bool isPrime (const int &number)
 {
     if (number == 0 || number == 1)
         return false;
-    
+
     int divisor = 2;
     int divisorCount = 2;
-    
+
     int limit = floor (sqrt (number));
-    
+
     while (divisor < limit + 1)
     {
         if (number % divisor == 0)
             divisorCount += 2;
-        
+
         divisor++;
     }
-    
+
     if (divisorCount == 2)
         return true;
-    
+
     else
         return false;
 }
@@ -39,20 +39,20 @@ bool isPrime2 (const int &number)
     int divisor = 1;
     int divisorCount = 0;
     int quotient = number;
-    
+
     while (divisor < quotient)
     {
         quotient = number / divisor;
-        
+
         if (number % divisor == 0)
             divisorCount += 2;
-        
+
         divisor++;
     }
-    
+
     if (divisorCount == 2)
         return true;
-    
+
     else
         return false;
 }
@@ -69,6 +69,6 @@ void printPrimeNumbersUpTo (const int &upperLimit)
 int main()
 {
     printPrimeNumbersUpTo (500);
-    
+
     return 0;
 }
